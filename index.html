@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="utf-8">
@@ -7,560 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-<style>
-/* ==========================================================================
-   ESTILO VISUAL OFICIAL UNIVERSIDAD EUROPEA (UEM)
-   - Colores:
-       * Rojo UEM: #FF3228 (Acento <= 10%: cifras clave, badges, botones)
-       * Antracita: #1E1E1E (Portadas, cierres y texto)
-       * Blanco: #FFFFFF (Fondo de contenido)
-       * Azul real: #2D41B4 (Rigor, alianzas y convenios)
-       * Gris de tarjetas: #F5F5F5 con bordes #EAEAEA
-   - Tipografía: Poppins, Segoe UI, Arial, sans-serif
-   - Composición: Retícula modular inspirada en el cuadrado del logo
-   - Prohibido: Degradados, iconos infantiles y líneas bajo los títulos
-   ========================================================================== */
-
-:root {
-  --color-red: #FF3228;
-  --color-anthracite: #1E1E1E;
-  --color-white: #FFFFFF;
-  --color-blue: #2D41B4;
-  --color-card-bg: #F5F5F5;
-  --color-card-border: #EAEAEA;
-  --color-border-dark: #333333;
-  --color-text-body: #1E1E1E;
-  --color-text-muted: #555555;
-  --color-text-light: #777777;
-  --font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
-  --radius-square: 4px;
-  --radius-card: 6px;
-  --spacing-container: 1140px;
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html, body {
-  background-color: var(--color-white);
-  color: var(--color-text-body);
-  font-family: var(--font-family);
-  font-size: 15px;
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-}
-
-/* Envoltura principal */
-.page-wrap {
-  width: 100%;
-  max-width: var(--spacing-container);
-  margin: 0 auto;
-  padding: 24px 20px 60px;
-  display: flex;
-  flex-direction: column;
-  gap: 28px;
-}
-
-/* CABECERA / PORTADA INSTITUCIONAL (Antracita #1E1E1E) */
-.header-hero {
-  background-color: var(--color-anthracite);
-  color: var(--color-white);
-  border-radius: var(--radius-card);
-  padding: clamp(28px, 4vw, 44px);
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.header-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 16px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid var(--color-border-dark);
-}
-
-.logo-svg {
-  height: 40px;
-  width: auto;
-  display: block;
-}
-
-.header-meta {
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: #AAAAAA;
-  font-weight: 500;
-}
-
-.hero-body h1 {
-  font-size: clamp(28px, 4.5vw, 44px);
-  font-weight: 700;
-  line-height: 1.15;
-  color: var(--color-white);
-  margin-bottom: 8px;
-  letter-spacing: -0.02em;
-}
-
-.hero-faculty {
-  font-size: 17px;
-  font-weight: 500;
-  color: #CCCCCC;
-  margin-bottom: 16px;
-}
-
-.hero-lead {
-  font-size: 15px;
-  line-height: 1.6;
-  max-width: 820px;
-  color: #E0E0E0;
-  font-weight: 300;
-}
-.hero-lead b {
-  color: var(--color-white);
-  font-weight: 600;
-}
-
-/* Fila de metadatos de la cabecera */
-.hero-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 6px;
-}
-.hero-tag {
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.16);
-  color: #FFFFFF;
-  padding: 5px 12px;
-  border-radius: var(--radius-square);
-  font-size: 12px;
-  font-weight: 500;
-}
-.hero-tag.accent {
-  background: var(--color-red);
-  border-color: var(--color-red);
-  color: var(--color-white);
-  font-weight: 600;
-}
-
-/* CONCLUSIÓN PRINCIPAL / CALLOUT */
-.callout-box {
-  background: var(--color-card-bg);
-  border: 1px solid var(--color-card-border);
-  border-left: 6px solid var(--color-red);
-  border-radius: var(--radius-card);
-  padding: 24px 28px;
-}
-.callout-tag {
-  display: inline-block;
-  background: var(--color-red);
-  color: var(--color-white);
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  padding: 3px 8px;
-  border-radius: 2px;
-  margin-bottom: 12px;
-}
-.callout-box h2 {
-  font-size: 18px;
-  font-weight: 700;
-  color: var(--color-anthracite);
-  margin-bottom: 10px;
-}
-.callout-box p {
-  font-size: 14.5px;
-  line-height: 1.65;
-  color: var(--color-text-body);
-  margin-bottom: 10px;
-}
-.callout-box p:last-child {
-  margin-bottom: 0;
-}
-.callout-box b {
-  color: var(--color-anthracite);
-  font-weight: 600;
-}
-
-/* RETÍCULA MODULAR DE CIFRAS CLAVE (48-60 pt) */
-.kpi-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
-}
-@media (max-width: 900px) {
-  .kpi-grid { grid-template-columns: repeat(2, 1fr); }
-}
-@media (max-width: 500px) {
-  .kpi-grid { grid-template-columns: 1fr; }
-}
-
-.kpi-card {
-  background: var(--color-card-bg);
-  border: 1px solid var(--color-card-border);
-  border-radius: var(--radius-card);
-  padding: 22px 20px;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-}
-.kpi-card.highlight {
-  background: var(--color-white);
-  border: 2px solid var(--color-red);
-}
-.kpi-square {
-  width: 12px;
-  height: 12px;
-  border-radius: 2px;
-  margin-bottom: 14px;
-}
-.kpi-card .number {
-  font-size: 52px;
-  font-weight: 700;
-  line-height: 1;
-  letter-spacing: -0.03em;
-  margin-bottom: 8px;
-}
-.kpi-card .number .unit {
-  font-size: 26px;
-  font-weight: 600;
-  margin-left: 2px;
-}
-.kpi-card .label {
-  font-size: 13.5px;
-  font-weight: 600;
-  color: var(--color-anthracite);
-  margin-bottom: 4px;
-}
-.kpi-card .sub {
-  font-size: 12px;
-  color: var(--color-text-muted);
-}
-
-/* SECCIONES MODULARES Y TARJETAS GENERALES */
-.card-section {
-  background: var(--color-white);
-  border: 1px solid var(--color-card-border);
-  border-radius: var(--radius-card);
-  padding: 28px 30px;
-}
-.card-section.bg-gray {
-  background: var(--color-card-bg);
-}
-
-.section-title {
-  font-size: 20px;
-  font-weight: 700;
-  color: var(--color-anthracite);
-  margin-bottom: 6px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.section-title .square-mark {
-  width: 10px;
-  height: 10px;
-  background: var(--color-red);
-  display: inline-block;
-  border-radius: 1px;
-}
-.section-subtitle {
-  font-size: 13px;
-  color: var(--color-text-muted);
-  margin-bottom: 22px;
-  line-height: 1.5;
-}
-
-/* GRID 2 COLUMNAS */
-.grid-2 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-}
-@media (max-width: 820px) {
-  .grid-2 { grid-template-columns: 1fr; }
-}
-
-/* BARRAS APILADAS ANUALES (Retícula sobria) */
-.year-stack-row {
-  display: grid;
-  grid-template-columns: 50px 1fr 110px;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 14px;
-}
-.year-label {
-  font-size: 14px;
-  font-weight: 700;
-  color: var(--color-anthracite);
-}
-.year-bar-track {
-  display: flex;
-  height: 32px;
-  border-radius: var(--radius-square);
-  overflow: hidden;
-  background: #E5E5E5;
-}
-.year-bar-track span {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--color-white);
-  font-size: 11px;
-  font-weight: 600;
-  min-width: 6px;
-}
-.year-total {
-  font-size: 12px;
-  color: var(--color-text-muted);
-  text-align: right;
-  font-variant-numeric: tabular-nums;
-  font-weight: 500;
-}
-
-/* LEYENDA MODULAR */
-.legend-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 14px 22px;
-  margin-top: 18px;
-  padding-top: 14px;
-  border-top: 1px solid var(--color-card-border);
-}
-.legend-item {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 12.5px;
-  color: var(--color-text-body);
-  font-weight: 500;
-}
-.legend-box {
-  width: 12px;
-  height: 12px;
-  border-radius: 2px;
-  flex-shrink: 0;
-}
-
-/* BARRAS DE COMPARATIVA HORIZONTAL */
-.comp-group {
-  margin-bottom: 18px;
-}
-.comp-group:last-child {
-  margin-bottom: 0;
-}
-.comp-group-label {
-  font-size: 12.5px;
-  font-weight: 700;
-  color: var(--color-anthracite);
-  margin-bottom: 6px;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-.comp-row {
-  display: grid;
-  grid-template-columns: 70px 1fr 50px;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 6px;
-  font-size: 12.5px;
-}
-.comp-year {
-  color: var(--color-text-muted);
-  font-weight: 500;
-}
-.comp-track {
-  height: 18px;
-  background: #E8E8E8;
-  border-radius: var(--radius-square);
-  overflow: hidden;
-}
-.comp-fill {
-  height: 100%;
-  border-radius: var(--radius-square);
-}
-.comp-val {
-  font-weight: 700;
-  text-align: right;
-  font-variant-numeric: tabular-nums;
-  color: var(--color-anthracite);
-}
-
-/* TABLA OFICIAL UEM (Rigor y sobriedad) */
-.table-container {
-  overflow-x: auto;
-  border: 1px solid var(--color-card-border);
-  border-radius: var(--radius-square);
-}
-.uem-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 12.5px;
-  text-align: left;
-}
-.uem-table th {
-  background-color: var(--color-anthracite);
-  color: var(--color-white);
-  padding: 10px 14px;
-  font-weight: 600;
-  letter-spacing: 0.03em;
-  text-align: right;
-}
-.uem-table th:first-child {
-  text-align: left;
-}
-.uem-table td {
-  padding: 11px 14px;
-  border-bottom: 1px solid var(--color-card-border);
-  color: var(--color-text-body);
-  text-align: right;
-  white-space: nowrap;
-}
-.uem-table td:first-child {
-  text-align: left;
-  font-weight: 600;
-  color: var(--color-anthracite);
-}
-.uem-table tr:last-child td {
-  border-bottom: none;
-}
-.uem-table tr:nth-child(even) td {
-  background-color: #FAFAFA;
-}
-.table-badge {
-  display: inline-block;
-  padding: 2px 6px;
-  border-radius: 2px;
-  font-size: 11px;
-  font-weight: 600;
-}
-.table-badge.blue {
-  background: rgba(45, 65, 180, 0.12);
-  color: var(--color-blue);
-}
-.table-badge.red {
-  background: rgba(255, 50, 40, 0.12);
-  color: var(--color-red);
-}
-
-/* LISTAS DE CONCLUSIONES Y RECOMENDACIONES */
-.points-list {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  margin-top: 10px;
-}
-.points-list li {
-  position: relative;
-  padding-left: 20px;
-  font-size: 14px;
-  line-height: 1.55;
-  color: var(--color-text-body);
-}
-.points-list li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 7px;
-  width: 7px;
-  height: 7px;
-  background: var(--color-red);
-  border-radius: 1px;
-}
-.points-list.blue li::before {
-  background: var(--color-blue);
-}
-.points-list strong {
-  color: var(--color-anthracite);
-  font-weight: 600;
-}
-
-/* CUADROS DE CLASIFICACIÓN DE REGISTROS */
-.defs-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 14px;
-  margin-top: 12px;
-}
-@media (max-width: 650px) {
-  .defs-grid { grid-template-columns: 1fr; }
-}
-.def-item {
-  background: var(--color-card-bg);
-  border: 1px solid var(--color-card-border);
-  border-radius: var(--radius-square);
-  padding: 14px 16px;
-  display: flex;
-  gap: 12px;
-  align-items: flex-start;
-}
-.def-color-box {
-  width: 14px;
-  height: 14px;
-  border-radius: 2px;
-  margin-top: 3px;
-  flex-shrink: 0;
-}
-.def-content h4 {
-  font-size: 13.5px;
-  font-weight: 700;
-  color: var(--color-anthracite);
-  margin-bottom: 3px;
-}
-.def-content p {
-  font-size: 12.5px;
-  color: var(--color-text-muted);
-  line-height: 1.45;
-}
-
-/* PIE / CIERRE METODOLÓGICO (Antracita #1E1E1E) */
-.footer-closure {
-  background: var(--color-anthracite);
-  color: #CCCCCC;
-  border-radius: var(--radius-card);
-  padding: 28px 32px;
-  font-size: 12.5px;
-  line-height: 1.6;
-}
-.footer-closure h3 {
-  font-size: 14px;
-  font-weight: 700;
-  color: var(--color-white);
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  margin-bottom: 12px;
-}
-.footer-closure ul {
-  padding-left: 18px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-.footer-closure strong {
-  color: var(--color-white);
-}
-.footer-bottom-bar {
-  margin-top: 20px;
-  padding-top: 16px;
-  border-top: 1px solid var(--color-border-dark);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 11.5px;
-  color: #888888;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-</style>
+<link rel="stylesheet" href="uem.css">
 </head>
 <body>
 
@@ -611,7 +58,7 @@ html, body {
     </div>
   </header>
 
-  <!-- CONCLUSIÓN PRINCIPAL (Callout con acento Rojo UEM) -->
+  <!-- CONCLUSIÓN PRINCIPAL (Callout con acento Rojo UEM y ancho de lectura óptimo) -->
   <section class="callout-box">
     <span class="callout-tag">Conclusión principal</span>
     <h2>Efecto parcial y estadísticamente significativo</h2>
@@ -628,51 +75,51 @@ html, body {
     <div class="kpi-grid">
       <!-- KPI 1: FILIACIÓN CORRECTA (Acento Rojo UEM #FF3228) -->
       <div class="kpi-card highlight">
-        <div class="kpi-square" style="background: var(--color-red);"></div>
-        <div class="number" style="color: var(--color-red);">34.9<span class="unit">%</span></div>
+        <div class="kpi-square sq-red"></div>
+        <div class="number">34,9<span class="unit">%</span></div>
         <div class="label">Filiación correcta</div>
         <div class="sub">381 de 1.091 registros totales</div>
       </div>
 
       <!-- KPI 2: UEM FORMA INCORRECTA -->
       <div class="kpi-card">
-        <div class="kpi-square" style="background: #E08A93;"></div>
-        <div class="number" style="color: var(--color-anthracite);">5.8<span class="unit">%</span></div>
+        <div class="kpi-square sq-rose"></div>
+        <div class="number">5,8<span class="unit">%</span></div>
         <div class="label">UEM forma incorrecta</div>
         <div class="sub">63 de 1.091 registros totales</div>
       </div>
 
       <!-- KPI 3: OTRA INSTITUCIÓN (Azul Real UEM #2D41B4) -->
       <div class="kpi-card">
-        <div class="kpi-square" style="background: var(--color-blue);"></div>
-        <div class="number" style="color: var(--color-blue);">25.5<span class="unit">%</span></div>
+        <div class="kpi-square sq-blue"></div>
+        <div class="number num-blue">25,5<span class="unit">%</span></div>
         <div class="label">Otra institución</div>
         <div class="sub">278 de 1.091 registros totales</div>
       </div>
 
       <!-- KPI 4: SIN FILIACIÓN REGISTRADA -->
       <div class="kpi-card">
-        <div class="kpi-square" style="background: #999999;"></div>
-        <div class="number" style="color: var(--color-text-muted);">33.8<span class="unit">%</span></div>
+        <div class="kpi-square sq-gray"></div>
+        <div class="number num-muted">33,8<span class="unit">%</span></div>
         <div class="label">Sin filiación registrada</div>
         <div class="sub">369 de 1.091 registros totales</div>
       </div>
     </div>
   </section>
 
-  <!-- DISTRIBUCIÓN ANUAL DE LOS REGISTROS (Barras apiladas modulares) -->
-  <section class="card-section bg-gray">
-    <h2 class="section-title"><span class="square-mark"></span> Distribución anual de los registros según la filiación</h2>
+  <!-- DISTRIBUCIÓN ANUAL DE LOS REGISTROS (Barras apiladas modulares con los 4 tramos etiquetados) -->
+  <section class="card-section">
+    <h2 class="section-title"><span class="square-mark mark-red"></span> Distribución anual de los registros según la filiación</h2>
     <p class="section-subtitle">Porcentaje sobre el total de cada año. La normativa entró en vigor en septiembre de 2024 y el año 2026 es parcial.</p>
 
     <!-- 2023 -->
     <div class="year-stack-row">
       <span class="year-label">2023</span>
       <div class="year-bar-track">
-        <span style="flex:69; background: var(--color-red);" title="Filiación correcta: 69 (25,6%)">25,6%</span>
-        <span style="flex:17; background: #E08A93;" title="UEM forma incorrecta: 17 (6,3%)"></span>
-        <span style="flex:84; background: var(--color-blue);" title="Otra institución: 84 (31,1%)">31,1%</span>
-        <span style="flex:100; background: #C8C8C8; color: #444;" title="Sin filiación: 100 (37,0%)">37,0%</span>
+        <span class="seg-red" style="flex:69;" title="Filiación correcta: 69 (25,6 %)">25,6 %</span>
+        <span class="seg-rose" style="flex:17;" title="UEM forma incorrecta: 17 (6,3 %)">6,3 %</span>
+        <span class="seg-blue" style="flex:84;" title="Otra institución: 84 (31,1 %)">31,1 %</span>
+        <span class="seg-gray" style="flex:100;" title="Sin filiación: 100 (37,0 %)">37,0 %</span>
       </div>
       <span class="year-total">270 registros</span>
     </div>
@@ -681,10 +128,10 @@ html, body {
     <div class="year-stack-row">
       <span class="year-label">2024</span>
       <div class="year-bar-track">
-        <span style="flex:117; background: var(--color-red);" title="Filiación correcta: 117 (35,2%)">35,2%</span>
-        <span style="flex:14; background: #E08A93;" title="UEM forma incorrecta: 14 (4,2%)"></span>
-        <span style="flex:88; background: var(--color-blue);" title="Otra institución: 88 (26,5%)">26,5%</span>
-        <span style="flex:113; background: #C8C8C8; color: #444;" title="Sin filiación: 113 (34,0%)">34,0%</span>
+        <span class="seg-red" style="flex:117;" title="Filiación correcta: 117 (35,2 %)">35,2 %</span>
+        <span class="seg-rose" style="flex:14;" title="UEM forma incorrecta: 14 (4,2 %)">4,2 %</span>
+        <span class="seg-blue" style="flex:88;" title="Otra institución: 88 (26,5 %)">26,5 %</span>
+        <span class="seg-gray" style="flex:113;" title="Sin filiación: 113 (34,0 %)">34,0 %</span>
       </div>
       <span class="year-total">332 registros</span>
     </div>
@@ -693,10 +140,10 @@ html, body {
     <div class="year-stack-row">
       <span class="year-label">2025</span>
       <div class="year-bar-track">
-        <span style="flex:106; background: var(--color-red);" title="Filiación correcta: 106 (35,0%)">35,0%</span>
-        <span style="flex:22; background: #E08A93;" title="UEM forma incorrecta: 22 (7,3%)"></span>
-        <span style="flex:72; background: var(--color-blue);" title="Otra institución: 72 (23,8%)">23,8%</span>
-        <span style="flex:103; background: #C8C8C8; color: #444;" title="Sin filiación: 103 (34,0%)">34,0%</span>
+        <span class="seg-red" style="flex:106;" title="Filiación correcta: 106 (35,0 %)">35,0 %</span>
+        <span class="seg-rose" style="flex:22;" title="UEM forma incorrecta: 22 (7,3 %)">7,3 %</span>
+        <span class="seg-blue" style="flex:72;" title="Otra institución: 72 (23,8 %)">23,8 %</span>
+        <span class="seg-gray" style="flex:103;" title="Sin filiación: 103 (34,0 %)">34,0 %</span>
       </div>
       <span class="year-total">303 registros</span>
     </div>
@@ -705,25 +152,25 @@ html, body {
     <div class="year-stack-row">
       <span class="year-label">2026</span>
       <div class="year-bar-track">
-        <span style="flex:89; background: var(--color-red);" title="Filiación correcta: 89 (47,8%)">47,8%</span>
-        <span style="flex:10; background: #E08A93;" title="UEM forma incorrecta: 10 (5,4%)"></span>
-        <span style="flex:34; background: var(--color-blue);" title="Otra institución: 34 (18,3%)">18,3%</span>
-        <span style="flex:53; background: #C8C8C8; color: #444;" title="Sin filiación: 53 (28,5%)">28,5%</span>
+        <span class="seg-red" style="flex:89;" title="Filiación correcta: 89 (47,8 %)">47,8 %</span>
+        <span class="seg-rose" style="flex:10;" title="UEM forma incorrecta: 10 (5,4 %)">5,4 %</span>
+        <span class="seg-blue" style="flex:34;" title="Otra institución: 34 (18,3 %)">18,3 %</span>
+        <span class="seg-gray" style="flex:53;" title="Sin filiación: 53 (28,5 %)">28,5 %</span>
       </div>
       <span class="year-total">186 registros</span>
     </div>
 
     <!-- Leyenda -->
     <div class="legend-grid">
-      <div class="legend-item"><div class="legend-box" style="background: var(--color-red);"></div> Filiación correcta</div>
-      <div class="legend-item"><div class="legend-box" style="background: #E08A93;"></div> UEM con forma incorrecta</div>
+      <div class="legend-item"><div class="legend-box" style="background: var(--color-red-accessible);"></div> Filiación correcta</div>
+      <div class="legend-item"><div class="legend-box" style="background: #F4CED2;"></div> UEM con forma incorrecta</div>
       <div class="legend-item"><div class="legend-box" style="background: var(--color-blue);"></div> Otra institución</div>
-      <div class="legend-item"><div class="legend-box" style="background: #C8C8C8;"></div> Sin filiación registrada</div>
+      <div class="legend-item"><div class="legend-box" style="background: var(--color-bar-unregistered);"></div> Sin filiación registrada</div>
     </div>
   </section>
 
   <!-- COMPARATIVA Y TABLA ESTADÍSTICA (GRID 2 COLUMNAS) -->
-  <div class="grid-2">
+  <div class="grid-2 grid-comp-table">
 
     <!-- Tarjeta de Evolución por periodos -->
     <section class="card-section">
@@ -735,18 +182,18 @@ html, body {
         <div class="comp-group-label">Total Global</div>
         <div class="comp-row">
           <span class="comp-year">2023-24</span>
-          <div class="comp-track"><div class="comp-fill" style="width: 47.8%; background: #BBBBBB;"></div></div>
-          <span class="comp-val">47,8%</span>
+          <div class="comp-track"><div class="comp-fill fill-base" style="width: 47.8%;"></div></div>
+          <span class="comp-val">47,8 %</span>
         </div>
         <div class="comp-row">
           <span class="comp-year">2025</span>
-          <div class="comp-track"><div class="comp-fill" style="width: 53.0%; background: #E08A93;"></div></div>
-          <span class="comp-val">53,0%</span>
+          <div class="comp-track"><div class="comp-fill fill-mid" style="width: 53.0%;"></div></div>
+          <span class="comp-val">53,0 %</span>
         </div>
         <div class="comp-row">
           <span class="comp-year">2026</span>
-          <div class="comp-track"><div class="comp-fill" style="width: 66.9%; background: var(--color-red);"></div></div>
-          <span class="comp-val">66,9%</span>
+          <div class="comp-track"><div class="comp-fill fill-top" style="width: 66.9%;"></div></div>
+          <span class="comp-val">66,9 %</span>
         </div>
       </div>
 
@@ -755,18 +202,18 @@ html, body {
         <div class="comp-group-label">Artículos científicos</div>
         <div class="comp-row">
           <span class="comp-year">2023-24</span>
-          <div class="comp-track"><div class="comp-fill" style="width: 34.5%; background: #BBBBBB;"></div></div>
-          <span class="comp-val">34,5%</span>
+          <div class="comp-track"><div class="comp-fill fill-base" style="width: 34.5%;"></div></div>
+          <span class="comp-val">34,5 %</span>
         </div>
         <div class="comp-row">
           <span class="comp-year">2025</span>
-          <div class="comp-track"><div class="comp-fill" style="width: 48.5%; background: #E08A93;"></div></div>
-          <span class="comp-val">48,5%</span>
+          <div class="comp-track"><div class="comp-fill fill-mid" style="width: 48.5%;"></div></div>
+          <span class="comp-val">48,5 %</span>
         </div>
         <div class="comp-row">
           <span class="comp-year">2026</span>
-          <div class="comp-track"><div class="comp-fill" style="width: 60.0%; background: var(--color-red);"></div></div>
-          <span class="comp-val">60,0%</span>
+          <div class="comp-track"><div class="comp-fill fill-top" style="width: 60.0%;"></div></div>
+          <span class="comp-val">60,0 %</span>
         </div>
       </div>
 
@@ -775,26 +222,26 @@ html, body {
         <div class="comp-group-label">Capítulos de libro</div>
         <div class="comp-row">
           <span class="comp-year">2023-24</span>
-          <div class="comp-track"><div class="comp-fill" style="width: 70.0%; background: #BBBBBB;"></div></div>
-          <span class="comp-val">70,0%</span>
+          <div class="comp-track"><div class="comp-fill fill-base" style="width: 70.0%;"></div></div>
+          <span class="comp-val">70,0 %</span>
         </div>
         <div class="comp-row">
           <span class="comp-year">2025</span>
-          <div class="comp-track"><div class="comp-fill" style="width: 50.9%; background: #E08A93;"></div></div>
-          <span class="comp-val">50,9%</span>
+          <div class="comp-track"><div class="comp-fill fill-mid" style="width: 50.9%;"></div></div>
+          <span class="comp-val">50,9 %</span>
         </div>
         <div class="comp-row">
           <span class="comp-year">2026</span>
-          <div class="comp-track"><div class="comp-fill" style="width: 68.9%; background: var(--color-red);"></div></div>
-          <span class="comp-val">68,9%</span>
+          <div class="comp-track"><div class="comp-fill fill-top" style="width: 68.9%;"></div></div>
+          <span class="comp-val">68,9 %</span>
         </div>
       </div>
     </section>
 
     <!-- Tabla Estadística de Rigor (Azul Real #2D41B4) -->
     <section class="card-section">
-      <h2 class="section-title"><span class="square-mark" style="background: var(--color-blue);"></span> Detalle de la comparación estadística</h2>
-      <p class="section-subtitle">Registros correctos sobre conocidos. Intervalo de confianza al 95% y significación p.</p>
+      <h2 class="section-title"><span class="square-mark mark-blue"></span> Detalle de la comparación estadística</h2>
+      <p class="section-subtitle">Registros correctos sobre conocidos. Intervalo de confianza al 95 % y significación p.</p>
 
       <div class="table-container">
         <table class="uem-table">
@@ -810,68 +257,68 @@ html, body {
           <tbody>
             <tr>
               <td>Global</td>
-              <td>186/389<br><small style="color:#777;">(47,8%)</small></td>
-              <td>106/200<br><small style="color:#777;">(53,0%)</small></td>
-              <td>89/133<br><small style="color:#777;">(66,9%)</small></td>
-              <td><span class="table-badge red">+19,1 pp</span><br><small style="color:#777;">p &lt; 0,001</small></td>
+              <td>186/389<br><small>(47,8 %)</small></td>
+              <td>106/200<br><small>(53,0 %)</small></td>
+              <td>89/133<br><small>(66,9 %)</small></td>
+              <td><span class="table-badge red">+19,1 pp</span><br><small>p &lt; 0,001</small></td>
             </tr>
             <tr>
               <td>Artículos</td>
-              <td>58/168<br><small style="color:#777;">(34,5%)</small></td>
-              <td>50/103<br><small style="color:#777;">(48,5%)</small></td>
-              <td>39/65<br><small style="color:#777;">(60,0%)</small></td>
-              <td><span class="table-badge red">+25,5 pp</span><br><small style="color:#777;">p &lt; 0,001</small></td>
+              <td>58/168<br><small>(34,5 %)</small></td>
+              <td>50/103<br><small>(48,5 %)</small></td>
+              <td>39/65<br><small>(60,0 %)</small></td>
+              <td><span class="table-badge red">+25,5 pp</span><br><small>p &lt; 0,001</small></td>
             </tr>
             <tr>
               <td>Capítulos</td>
-              <td>98/140<br><small style="color:#777;">(70,0%)</small></td>
-              <td>28/55<br><small style="color:#777;">(50,9%)</small></td>
-              <td>31/45<br><small style="color:#777;">(68,9%)</small></td>
-              <td><span class="table-badge blue">−1,1 pp</span><br><small style="color:#777;">p = 1,000</small></td>
+              <td>98/140<br><small>(70,0 %)</small></td>
+              <td>28/55<br><small>(50,9 %)</small></td>
+              <td>31/45<br><small>(68,9 %)</small></td>
+              <td><span class="table-badge blue">−1,1 pp</span><br><small>p = 1,000</small></td>
             </tr>
           </tbody>
         </table>
       </div>
 
-      <div style="margin-top: 16px; font-size: 12.5px; color: var(--color-text-muted); line-height: 1.5;">
+      <div class="table-note">
         <strong>Interpretación:</strong> La mejora interanual en artículos es sólida y consistente (+25,5 puntos). En capítulos de libro se aprecia una oscilación sin significación respecto al periodo basal.
       </div>
     </section>
 
   </div>
 
-  <!-- RESULTADOS POR TIPO DE APORTACIÓN -->
-  <section class="card-section bg-gray">
+  <!-- RESULTADOS POR TIPO DE APORTACIÓN (Sección limpia sin doble caja) -->
+  <section class="section-open">
     <h2 class="section-title"><span class="square-mark"></span> Resultados detallados por tipo de aportación</h2>
     <p class="section-subtitle">Comportamiento diferencial entre artículos científicos, capítulos y monografías completas.</p>
 
     <div class="grid-2">
       <!-- Artículos -->
-      <div style="background:#FFF; padding:20px; border-radius: var(--radius-square); border: 1px solid var(--color-card-border);">
-        <h3 style="font-size:16px; font-weight:700; color:var(--color-anthracite); margin-bottom:8px;">Artículos científicos</h3>
-        <p style="font-size:13.5px; line-height:1.55; color:var(--color-text-body); margin-bottom:14px;">
+      <div class="detail-box">
+        <h3>Artículos científicos</h3>
+        <p>
           Presentan la mejora más sólida y continua: la filiación correcta pasa del <b>34,5 % en 2023-24</b> al <b>48,5 % en 2025</b> (+14,0 puntos; p = 0,030) y alcanza el <b>60,0 % en 2026</b> (+25,5 puntos; p &lt; 0,001). Además, los artículos sin filiación bajan progresivamente del 22,9 % al 12,2 %.
         </p>
-        <div style="display:flex; flex-direction:column; gap:6px;">
-          <div class="comp-row"><span class="comp-year">2023</span><div class="comp-track"><div class="comp-fill" style="width:22%; background:#DDD;"></div></div><span class="comp-val">22%</span></div>
-          <div class="comp-row"><span class="comp-year">2024</span><div class="comp-track"><div class="comp-fill" style="width:44%; background:#BBB;"></div></div><span class="comp-val">44%</span></div>
-          <div class="comp-row"><span class="comp-year">2025</span><div class="comp-track"><div class="comp-fill" style="width:49%; background:#E08A93;"></div></div><span class="comp-val">49%</span></div>
-          <div class="comp-row"><span class="comp-year">2026</span><div class="comp-track"><div class="comp-fill" style="width:60%; background:var(--color-red);"></div></div><span class="comp-val" style="color:var(--color-red);">60%</span></div>
+        <div>
+          <div class="comp-row"><span class="comp-year">2023</span><div class="comp-track"><div class="comp-fill fill-prev" style="width:22%;"></div></div><span class="comp-val">22 %</span></div>
+          <div class="comp-row"><span class="comp-year">2024</span><div class="comp-track"><div class="comp-fill fill-base" style="width:44%;"></div></div><span class="comp-val">44 %</span></div>
+          <div class="comp-row"><span class="comp-year">2025</span><div class="comp-track"><div class="comp-fill fill-mid" style="width:49%;"></div></div><span class="comp-val">49 %</span></div>
+          <div class="comp-row"><span class="comp-year">2026</span><div class="comp-track"><div class="comp-fill fill-top" style="width:60%;"></div></div><span class="comp-val">60 %</span></div>
         </div>
       </div>
 
       <!-- Capítulos y Libros -->
-      <div style="display:flex; flex-direction:column; gap:16px;">
-        <div style="background:#FFF; padding:18px 20px; border-radius: var(--radius-square); border: 1px solid var(--color-card-border);">
-          <h3 style="font-size:15px; font-weight:700; color:var(--color-anthracite); margin-bottom:6px;">Capítulos de libro</h3>
-          <p style="font-size:13px; line-height:1.5; color:var(--color-text-body);">
+      <div class="detail-stack">
+        <div class="detail-box">
+          <h3>Capítulos de libro</h3>
+          <p>
             Caída en 2025 (50,9 %) y recuperación en 2026 (68,9 %). El descenso coincide con un incremento sustancial de capítulos sin datos de filiación en la base de datos (más del 42 %).
           </p>
         </div>
 
-        <div style="background:#FFF; padding:18px 20px; border-radius: var(--radius-square); border: 1px solid var(--color-card-border);">
-          <h3 style="font-size:15px; font-weight:700; color:var(--color-anthracite); margin-bottom:6px;">Libros y monografías</h3>
-          <p style="font-size:13px; line-height:1.5; color:var(--color-text-body);">
+        <div class="detail-box">
+          <h3>Libros y monografías</h3>
+          <p>
             No pueden evaluarse formalmente: el <b>92 % de los 85 registros</b> registrados carece de datos de filiación en el Portal Científico.
           </p>
         </div>
@@ -879,49 +326,47 @@ html, body {
     </div>
   </section>
 
-  <!-- ANÁLISIS DE MEJORA Y ERRORES FRECUENTES -->
-  <section class="card-section">
+  <!-- ANÁLISIS DE MEJORA Y ERRORES FRECUENTES (Sección limpia sin doble caja) -->
+  <section class="section-open">
     <h2 class="section-title"><span class="square-mark"></span> Dónde está la mejora y principales errores de forma</h2>
     <p class="section-subtitle">Desglose de factores determinantes y causas más comunes de incorrección.</p>
 
     <div class="grid-2">
-      <div>
-        <p style="font-size:13.5px; line-height:1.6; color:var(--color-text-body); margin-bottom:14px;">
-          La mejora global obedece sobre todo a la <b>mayor presencia de la UEM en la firma</b>: los registros que no la mencionan caen del 44,2 % (2023-24) al 25,6 % (2026). Entre quienes sí la incluyen, la corrección de la denominación se mantiene alta y estable (86%–90%).
+      <div class="detail-box">
+        <p>
+          La mejora global obedece sobre todo a la <b>mayor presencia de la UEM en la firma</b>: los registros que no la mencionan caen del 44,2 % (2023-24) al 25,6 % (2026). Entre quienes sí la incluyen, la corrección de la denominación se mantiene alta y estable (86 %–90 %).
         </p>
         <div class="comp-group">
-          <div class="comp-group-label" style="font-size:11.5px;">Registros que NO mencionan la UEM</div>
-          <div class="comp-row"><span class="comp-year">2023-24</span><div class="comp-track"><div class="comp-fill" style="width:44.2%; background:#BBB;"></div></div><span class="comp-val">44,2%</span></div>
-          <div class="comp-row"><span class="comp-year">2025</span><div class="comp-track"><div class="comp-fill" style="width:36.0%; background:#E08A93;"></div></div><span class="comp-val">36,0%</span></div>
-          <div class="comp-row"><span class="comp-year">2026</span><div class="comp-track"><div class="comp-fill" style="width:25.6%; background:var(--color-red);"></div></div><span class="comp-val">25,6%</span></div>
+          <div class="comp-group-label">Registros que NO mencionan la UEM</div>
+          <div class="comp-row"><span class="comp-year">2023-24</span><div class="comp-track"><div class="comp-fill fill-base" style="width:44.2%;"></div></div><span class="comp-val">44,2 %</span></div>
+          <div class="comp-row"><span class="comp-year">2025</span><div class="comp-track"><div class="comp-fill fill-mid" style="width:36.0%;"></div></div><span class="comp-val">36,0 %</span></div>
+          <div class="comp-row"><span class="comp-year">2026</span><div class="comp-track"><div class="comp-fill fill-top" style="width:25.6%;"></div></div><span class="comp-val">25,6 %</span></div>
         </div>
       </div>
 
-      <div style="background:var(--color-card-bg); padding:18px 20px; border-radius:var(--radius-square); border:1px solid var(--color-card-border);">
-        <h4 style="font-size:13px; font-weight:700; color:var(--color-anthracite); text-transform:uppercase; letter-spacing:0.05em; margin-bottom:12px;">
-          Errores de forma más repetidos (2023–2026)
-        </h4>
-        <div style="display:flex; flex-direction:column; gap:10px;">
-          <div class="comp-row" style="grid-template-columns: 140px 1fr 30px;">
-            <span style="font-size:12px; font-weight:500;">Escribirla en inglés</span>
-            <div class="comp-track"><div class="comp-fill" style="width:100%; background:var(--color-red);"></div></div>
-            <span class="comp-val" style="color:var(--color-red);">28</span>
+      <div class="detail-box">
+        <h4>Errores de forma más repetidos (2023–2026)</h4>
+        <div>
+          <div class="comp-row wide-label">
+            <span>Escribirla en inglés</span>
+            <div class="comp-track"><div class="comp-fill fill-top" style="width:100%;"></div></div>
+            <span class="comp-val">28</span>
           </div>
-          <div class="comp-row" style="grid-template-columns: 140px 1fr 30px;">
-            <span style="font-size:12px; font-weight:500;">Omitir «de Madrid»</span>
-            <div class="comp-track"><div class="comp-fill" style="width:96.4%; background:#E08A93;"></div></div>
+          <div class="comp-row wide-label">
+            <span>Omitir «de Madrid»</span>
+            <div class="comp-track"><div class="comp-fill fill-mid" style="width:96.4%;"></div></div>
             <span class="comp-val">27</span>
           </div>
         </div>
-        <div style="font-size:12px; color:var(--color-text-muted); margin-top:14px; line-height:1.45;">
-          * Las dos causas concentran el 87% de todas las incorrecciones formales detectadas.
+        <div class="detail-footnote">
+          * Las dos causas concentran el 87 % de todas las incorrecciones formales detectadas.
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CLASIFICACIÓN MODULAR DE CRITERIOS -->
-  <section class="card-section bg-gray">
+  <!-- CLASIFICACIÓN MODULAR DE CRITERIOS (Sección limpia, tarjetas solo en los 4 ítems) -->
+  <section class="section-open">
     <h2 class="section-title"><span class="square-mark"></span> Clasificación de los registros</h2>
     <p class="section-subtitle">Cuatro categorías mutuamente excluyentes aplicadas al análisis de filiación.</p>
 
@@ -935,7 +380,7 @@ html, body {
       </div>
 
       <div class="def-item">
-        <div class="def-color-box" style="background: #E08A93;"></div>
+        <div class="def-color-box" style="background: var(--color-rose);"></div>
         <div class="def-content">
           <h4>UEM con forma incorrecta</h4>
           <p>Menciona la institución pero traducida al inglés, sin «de Madrid», solo siglas o variantes mezcladas.</p>
@@ -951,7 +396,7 @@ html, body {
       </div>
 
       <div class="def-item">
-        <div class="def-color-box" style="background: #AAAAAA;"></div>
+        <div class="def-color-box" style="background: var(--color-bar-unregistered);"></div>
         <div class="def-content">
           <h4>Sin filiación registrada</h4>
           <p>El registro extraído del Portal Científico no contiene ningún campo de filiación institucional cumplimentado.</p>
@@ -960,33 +405,35 @@ html, body {
     </div>
   </section>
 
-  <!-- CONCLUSIONES Y RECOMENDACIONES (GRID MODULAR) -->
-  <div class="grid-2">
-    <!-- Conclusiones -->
-    <section class="card-section">
-      <h2 class="section-title"><span class="square-mark"></span> Conclusiones</h2>
-      <ul class="points-list">
-        <li><strong>Efecto global medible:</strong> La filiación correcta aumenta +10,7 puntos entre registros con filiación conocida (del 47,8 % al 58,6 %).</li>
-        <li><strong>Artículos como motor:</strong> Es la tipología de producción que presenta la evolución más sólida y constante (alcanzando el 60 % en 2026).</li>
-        <li><strong>Capítulos de libro:</strong> Requieren especial supervisión debido a la caída transitoria de 2025 y a la alta tasa de registros sin datos.</li>
-        <li><strong>Margen de actuación:</strong> En 2026, un 33 % de publicaciones con filiación conocida sigue sin firmar correctamente por omitir la pertenencia a la UEM.</li>
-      </ul>
-    </section>
+  <!-- CONCLUSIONES Y RECOMENDACIONES (Secciones de texto sin cajas pesadas) -->
+  <section class="section-open">
+    <div class="grid-2">
+      <!-- Conclusiones -->
+      <div>
+        <h2 class="section-title"><span class="square-mark"></span> Conclusiones</h2>
+        <ul class="points-list">
+          <li><strong>Efecto global medible:</strong> La filiación correcta aumenta +10,7 puntos entre registros con filiación conocida (del 47,8 % al 58,6 %).</li>
+          <li><strong>Artículos como motor:</strong> Es la tipología de producción que presenta la evolución más sólida y constante (alcanzando el 60 % en 2026).</li>
+          <li><strong>Capítulos de libro:</strong> Requieren especial supervisión debido a la caída transitoria de 2025 y a la alta tasa de registros sin datos.</li>
+          <li><strong>Margen de actuación:</strong> En 2026, un 33 % de publicaciones con filiación conocida sigue sin firmar correctamente por omitir la pertenencia a la UEM.</li>
+        </ul>
+      </div>
 
-    <!-- Recomendaciones -->
-    <section class="card-section" style="border-left: 4px solid var(--color-blue);">
-      <h2 class="section-title"><span class="square-mark" style="background: var(--color-blue);"></span> Recomendaciones</h2>
-      <ul class="points-list blue">
-        <li><strong>Refuerzo en convocatorias:</strong> Comunicar de forma explícita la obligación de incluir la UEM en todas las firmas docentes e investigadoras.</li>
-        <li><strong>Forma oficial en español:</strong> Insistir en rechazar traducciones («European University of Madrid») o siglas aisladas («UEM») en envíos editoriales.</li>
-        <li><strong>Protocolo para libros y capítulos:</strong> Establecer una plantilla de firma institucional obligatoria previa a la firma de contratos editoriales.</li>
-      </ul>
-    </section>
-  </div>
+      <!-- Recomendaciones -->
+      <div>
+        <h2 class="section-title"><span class="square-mark mark-blue"></span> Recomendaciones</h2>
+        <ul class="points-list blue">
+          <li><strong>Refuerzo en convocatorias:</strong> Comunicar de forma explícita la obligación de incluir la UEM en todas las firmas docentes e investigadoras.</li>
+          <li><strong>Forma oficial en español:</strong> Insistir en rechazar traducciones («European University of Madrid») o siglas aisladas («UEM») en envíos editoriales.</li>
+          <li><strong>Protocolo para libros y capítulos:</strong> Establecer una plantilla de firma institucional obligatoria previa a la firma de contratos editoriales.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-  <!-- CIERRE Y METODOLOGÍA (ANTRACITA #1E1E1E) -->
-  <footer class="footer-closure">
-    <h3>Fuente y metodología institucional</h3>
+  <!-- CIERRE Y METODOLOGÍA PLEGABLE UNIFICADO (ANTRACITA #1E1E1E) -->
+  <details class="foot">
+    <summary>Fuente y metodología institucional</summary>
     <ul>
       <li><strong>Fuente de extracción:</strong> Portal Científico de la Universidad Europea de Madrid. Se analizan 1.091 registros de producción científica de la Facultad de Ciencias Jurídicas, Educación y Humanidades publicados entre 2023 y 2026 (412 artículos, 418 capítulos de libro, 130 congresos, 85 libros y 46 aportaciones misceláneas). El año 2026 está en curso.</li>
       <li><strong>Criterio normativo:</strong> Según la directriz de filiación, la forma oficial exigida es «Universidad Europea de Madrid», sin traducir, abreviar ni usar siglas. En casos con múltiples firmas UEM, solo computa como correcta si todas se ajustan a la norma.</li>
@@ -997,7 +444,7 @@ html, body {
       <span>Universidad Europea de Madrid · Portal Científico</span>
       <span>Documento de evaluación interna · Noviembre 2026</span>
     </div>
-  </footer>
+  </details>
 
 </div>
 
