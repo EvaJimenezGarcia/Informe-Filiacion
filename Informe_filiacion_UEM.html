@@ -1,76 +1,1039 @@
-<!DOCTYPE html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Informe de filiación institucional · UEM</title><style>:root{--color-fg:#1f1d1c;--color-fg-muted:#6b6664;--color-panel:#fff;--color-border-line:#e4dfdd;--cds-radius:12px;--cds-gap-lg:1.5rem;--cds-gap-md:1rem;--cds-pad-lg:1.25rem;--cds-pad-md:1rem;--cds-font-size-caption:.85rem;--cds-font-size-body:.95rem;--cds-font-size-heading:1.05rem;--font-anthropic-sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;--font-anthropic-serif:Georgia,"Times New Roman",serif}
-html,body{margin:0;background:#f7f5f4}
-body{padding:clamp(.75rem,3vw,2rem);font-family:var(--font-anthropic-sans);color:var(--color-fg)}
-:root{--cds-gap-lg:1.5rem}
-.inf{--accent:#9e1b2c;max-width:68rem;margin-inline:auto;display:flex;flex-direction:column;gap:var(--cds-gap-lg)}
-.inf *{box-sizing:border-box}
-.inf-hero{border:1px solid var(--color-border-line);border-radius:var(--cds-radius);padding:clamp(1.25rem,4vw,2.5rem);background:linear-gradient(135deg,color-mix(in srgb,var(--accent) 16%,#fff),#fff 70%)}
-.inf-logo{display:block;height:3rem;width:auto;background:#fff;padding:.4rem .7rem;border-radius:.5rem;margin-bottom:1.1rem}
-.inf-eyebrow{font-size:var(--cds-font-size-caption);letter-spacing:.08em;text-transform:uppercase;color:var(--color-fg-muted);margin:0 0 .6rem}
-.inf-hero h1{font-family:var(--font-anthropic-serif);font-weight:400;font-size:clamp(2.1rem,6vw,3.5rem);line-height:1.05;margin:0}
-.inf-fac{font-size:var(--cds-font-size-heading);color:var(--color-fg-muted);margin:.4rem 0 1.1rem}
-.inf-lead{font-size:1.15rem;line-height:1.55;max-width:46rem;margin:0}
-.callout{border:1px solid var(--color-border-line);border-left:5px solid var(--accent);border-radius:var(--cds-radius);background:#fff;padding:var(--cds-pad-lg)}
-.callout h2{margin:0 0 .5rem;font-size:var(--cds-font-size-heading);font-weight:600;color:var(--accent)}
-.callout p{margin:.35rem 0 0;line-height:1.55;font-size:1.05rem}
-.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,11rem),1fr));gap:var(--cds-gap-md)}
-.tile{border:1px solid var(--color-border-line);border-radius:var(--cds-radius);background:#fff;padding:var(--cds-pad-lg)}
-.tile .n{font-family:var(--font-anthropic-serif);font-weight:400;font-size:2.6rem;line-height:1}
-.tile .u{font-family:var(--font-anthropic-serif);font-size:1.6rem;margin-left:.15rem}
-.tile p{margin:.4rem 0 0;color:var(--color-fg-muted);font-size:var(--cds-font-size-caption)}
-.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,24rem),1fr));gap:var(--cds-gap-md);align-items:start}
-.card{border:1px solid var(--color-border-line);border-radius:var(--cds-radius);background:#fff;padding:var(--cds-pad-lg)}
-.card h2,.card h3{font-size:var(--cds-font-size-heading);font-weight:500;margin:0;color:var(--accent)}
-.note{color:var(--color-fg-muted);font-size:var(--cds-font-size-caption);margin:.25rem 0 .9rem}
-.txt{margin:.8rem 0 0;line-height:1.55;font-size:var(--cds-font-size-body)}
-.sec{font-family:var(--font-anthropic-serif);font-weight:400;font-size:1.75rem;margin:.6rem 0 0;color:var(--accent)}
-.yr{display:grid;grid-template-columns:3rem 1fr 6rem;align-items:center;gap:.6rem;margin-bottom:.6rem;font-size:var(--cds-font-size-caption)}
-.yr .y{font-weight:600}.yr .t{color:var(--color-fg-muted);text-align:right}
-.stk{display:flex;gap:2px;height:1.9rem;border-radius:.4rem;overflow:hidden}
-.stk span{display:flex;align-items:center;justify-content:center;min-width:4px;color:#fff;font-size:.75rem;font-weight:600}
-.legend{display:flex;flex-wrap:wrap;gap:.35rem 1.1rem;margin-top:.9rem;font-size:var(--cds-font-size-caption)}
-.legend div{display:inline-flex;align-items:baseline;gap:.4rem}
-.sw{display:inline-block;width:.7rem;height:.7rem;border-radius:2px;flex:none}
-.ba{display:flex;flex-direction:column;gap:1rem}
-.ba-l{font-size:var(--cds-font-size-caption);font-weight:600;margin-bottom:.3rem}
-.ba-line{display:grid;grid-template-columns:4.2rem 1fr 3.6rem;align-items:center;gap:.5rem;font-size:var(--cds-font-size-caption);margin-bottom:.25rem}
-.ba-k{color:var(--color-fg-muted)}
-.trk{height:.95rem;border-radius:.3rem;background:#eeebea;overflow:hidden;display:block}
-.fill{display:block;height:100%;border-radius:.3rem;background:#b8b2b0}
-.val{font-variant-numeric:tabular-nums;font-weight:600;text-align:right}
-.bars{display:flex;flex-direction:column;gap:.6rem}
-.bar{display:grid;grid-template-columns:minmax(0,12rem) 1fr 3.6rem;align-items:center;gap:.6rem;font-size:var(--cds-font-size-caption)}
-.bar.top .fill{background:var(--accent)}
-.ct{width:100%;border-collapse:collapse;font-size:var(--cds-font-size-caption)}
-.ct th{text-align:right;font-weight:600;padding:.5rem .55rem;color:#fff;background:var(--accent)}
-.ct th:first-child,.ct td:first-child{text-align:left}
-.ct td{padding:.5rem .55rem;border-bottom:1px solid var(--color-border-line);white-space:nowrap}
-.ct td.r{text-align:right}
-.scroll{overflow-x:auto}
-.defs{display:flex;flex-direction:column;gap:.7rem}
-.defs>div{display:flex;gap:.6rem;align-items:flex-start;font-size:var(--cds-font-size-body);line-height:1.45}
-.defs .sw{margin-top:.35rem}.defs b{display:block}
-ul.pts{margin:.7rem 0 0;padding-left:1.2rem;display:flex;flex-direction:column;gap:.55rem;line-height:1.5;font-size:var(--cds-font-size-body)}
-.foot{border:1px solid var(--color-border-line);border-radius:var(--cds-radius);padding:var(--cds-pad-md) var(--cds-pad-lg);background:#fff}
-.foot summary{cursor:pointer;color:var(--accent);font-weight:600;font-size:var(--cds-font-size-caption)}
-.foot ul{margin:.6rem 0 0;padding-left:1.2rem;color:var(--color-fg-muted);font-size:var(--cds-font-size-caption);line-height:1.6}
-@media (max-width:36rem){.bar{grid-template-columns:1fr auto}.bar .trk{grid-column:1 / -1;order:3}.yr{grid-template-columns:2.6rem 1fr}.yr .t{display:none}}
-</style></head><body><div class="inf">
-<nav style="display:flex;justify-content:flex-end;margin-bottom:0.75rem;">
-  <a href="estilo-uem.html" style="display:inline-flex;align-items:center;gap:6px;background:#fff;border:1px solid var(--color-border-line);color:var(--accent);padding:0.45rem 0.9rem;border-radius:2rem;font-size:0.85rem;font-weight:600;text-decoration:none;box-shadow:0 1px 3px rgba(0,0,0,0.05);transition:all .15s ease;">
-    <span>Ver versión con Estilo Oficial UEM →</span>
-  </a>
-</nav>
-<header class="inf-hero"><img class="inf-logo" alt="Logotipo de la Universidad Europea de Madrid" width="260" height="71" src="data:image/png;base64,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"><p class="inf-eyebrow">Portal Científico · Universidad Europea de Madrid · noviembre de 2026</p><h1>Filiación institucional</h1><p class="inf-fac">Facultad de Ciencias Jurídicas, Educación y Humanidades</p><p class="inf-lead">Este informe evalúa si la normativa de filiación institucional de la Universidad Europea, implantada en el curso 2024-2025, ha conseguido que el personal investigador de la Facultad firme sus publicaciones con la denominación oficial: Universidad Europea de Madrid.</p></header>
-<section class="callout"><h2>Conclusión principal</h2><p>La normativa ha funcionado de forma parcial. Entre los registros con filiación conocida, la filiación correcta pasa del 47,8 % (2023-24) al 58,6 % (2025-26): +10,7 puntos porcentuales, una diferencia estadísticamente significativa (p = 0,004).</p><p>Desglosado por año, la filiación correcta pasa del 47,8 % en 2023-24 al 53,0 % en 2025 y al 66,9 % en 2026. La mejora de 2025 aún no es significativa; la de 2026 sí (+19,1 puntos; p &lt; 0,001), aunque 2026 es un año parcial con solo 133 registros evaluables. Mejoran los artículos; capítulos cae en 2025 y se recupera en 2026; los libros no se pueden evaluar.</p></section>
-<section class="tiles"><div class='tile'><b class='n'>34.9</b><span class='u'>%</span><p>Filiación correcta · 381 de 1.091</p></div><div class='tile'><b class='n'>5.8</b><span class='u'>%</span><p>UEM con forma incorrecta · 63 de 1.091</p></div><div class='tile'><b class='n'>25.5</b><span class='u'>%</span><p>Otra institución · 278 de 1.091</p></div><div class='tile'><b class='n'>33.8</b><span class='u'>%</span><p>Sin filiación registrada · 369 de 1.091</p></div></section>
-<section class="card"><h2>Distribución anual de los registros según la filiación</h2><p class="note">Porcentaje del total de cada año. La normativa entra en vigor en septiembre de 2024 y 2026 es un año parcial.</p><div class='yr'><span class='y'>2023</span><div class='stk'><span title='2023 · Filiación correcta: 69 de 270 (25,6 %)' style='flex:69 1 0;background:#9e1b2c'>25,6 %</span><span title='2023 · UEM con forma incorrecta: 17 de 270 (6,3 %)' style='flex:17 1 0;background:#d98a92'></span><span title='2023 · Otra institución: 84 de 270 (31,1 %)' style='flex:84 1 0;background:#7a7573'>31,1 %</span><span title='2023 · Sin filiación registrada: 100 de 270 (37,0 %)' style='flex:100 1 0;background:#b8b2b0'>37,0 %</span></div><span class='t'>270 registros</span></div><div class='yr'><span class='y'>2024</span><div class='stk'><span title='2024 · Filiación correcta: 117 de 332 (35,2 %)' style='flex:117 1 0;background:#9e1b2c'>35,2 %</span><span title='2024 · UEM con forma incorrecta: 14 de 332 (4,2 %)' style='flex:14 1 0;background:#d98a92'></span><span title='2024 · Otra institución: 88 de 332 (26,5 %)' style='flex:88 1 0;background:#7a7573'>26,5 %</span><span title='2024 · Sin filiación registrada: 113 de 332 (34,0 %)' style='flex:113 1 0;background:#b8b2b0'>34,0 %</span></div><span class='t'>332 registros</span></div><div class='yr'><span class='y'>2025</span><div class='stk'><span title='2025 · Filiación correcta: 106 de 303 (35,0 %)' style='flex:106 1 0;background:#9e1b2c'>35,0 %</span><span title='2025 · UEM con forma incorrecta: 22 de 303 (7,3 %)' style='flex:22 1 0;background:#d98a92'></span><span title='2025 · Otra institución: 72 de 303 (23,8 %)' style='flex:72 1 0;background:#7a7573'>23,8 %</span><span title='2025 · Sin filiación registrada: 103 de 303 (34,0 %)' style='flex:103 1 0;background:#b8b2b0'>34,0 %</span></div><span class='t'>303 registros</span></div><div class='yr'><span class='y'>2026</span><div class='stk'><span title='2026 · Filiación correcta: 89 de 186 (47,8 %)' style='flex:89 1 0;background:#9e1b2c'>47,8 %</span><span title='2026 · UEM con forma incorrecta: 10 de 186 (5,4 %)' style='flex:10 1 0;background:#d98a92'></span><span title='2026 · Otra institución: 34 de 186 (18,3 %)' style='flex:34 1 0;background:#7a7573'>18,3 %</span><span title='2026 · Sin filiación registrada: 53 de 186 (28,5 %)' style='flex:53 1 0;background:#b8b2b0'>28,5 %</span></div><span class='t'>186 registros</span></div><div class="legend"><div><i class='sw' style='background:#9e1b2c'></i><span>Filiación correcta</span></div><div><i class='sw' style='background:#d98a92'></i><span>UEM con forma incorrecta</span></div><div><i class='sw' style='background:#7a7573'></i><span>Otra institución</span></div><div><i class='sw' style='background:#b8b2b0'></i><span>Sin filiación registrada</span></div></div><p class="txt">De los 1.091 registros, 381 (34,9 %) tienen filiación UEM correcta, 63 (5,8 %) incluyen la UEM con una forma incorrecta, 278 (25,5 %) solo muestran otras filiaciones y 369 (33,8 %) carecen de filiación registrada. La proporción de filiaciones correctas sobre el total crece del 26 % en 2023 al 48 % en 2026 (año parcial); 2025 queda en el 42 %.</p></section>
-<section class="grid2"><div class="card"><h2>Filiación correcta por periodo</h2><p class="note">Porcentaje sobre registros con filiación conocida: 2023-24, 2025 y 2026 (año parcial, pocos registros). Libros no se muestra: solo hay 7 registros evaluables.</p><div class='ba'><div><div class='ba-l'>Global</div><div class='ba-line'><span class='ba-k'>2023-24</span><span class='trk'><span class='fill' style='width:47.8%;background:#b8b2b0'></span></span><span class='val'>47,8 %</span></div><div class='ba-line'><span class='ba-k'>2025</span><span class='trk'><span class='fill' style='width:53.0%;background:#d98a92'></span></span><span class='val'>53,0 %</span></div><div class='ba-line'><span class='ba-k'>2026</span><span class='trk'><span class='fill' style='width:66.9%;background:#9e1b2c'></span></span><span class='val'>66,9 %</span></div></div><div><div class='ba-l'>Artículos</div><div class='ba-line'><span class='ba-k'>2023-24</span><span class='trk'><span class='fill' style='width:34.5%;background:#b8b2b0'></span></span><span class='val'>34,5 %</span></div><div class='ba-line'><span class='ba-k'>2025</span><span class='trk'><span class='fill' style='width:48.5%;background:#d98a92'></span></span><span class='val'>48,5 %</span></div><div class='ba-line'><span class='ba-k'>2026</span><span class='trk'><span class='fill' style='width:60.0%;background:#9e1b2c'></span></span><span class='val'>60,0 %</span></div></div><div><div class='ba-l'>Capítulos</div><div class='ba-line'><span class='ba-k'>2023-24</span><span class='trk'><span class='fill' style='width:70.0%;background:#b8b2b0'></span></span><span class='val'>70,0 %</span></div><div class='ba-line'><span class='ba-k'>2025</span><span class='trk'><span class='fill' style='width:50.9%;background:#d98a92'></span></span><span class='val'>50,9 %</span></div><div class='ba-line'><span class='ba-k'>2026</span><span class='trk'><span class='fill' style='width:68.9%;background:#9e1b2c'></span></span><span class='val'>68,9 %</span></div></div></div></div>
-<div class="card"><h2>Detalle de la comparación</h2><p class="note">Registros con filiación correcta sobre registros con filiación conocida. Diferencia respecto a 2023-24 en puntos porcentuales (pp), con intervalo de confianza del 95 % y valor p.</p><div class="scroll"><table class="ct"><thead><tr><th>Tipo</th><th>2023-24</th><th>2025</th><th>2026</th><th>2025 frente a 2023-24</th><th>2026 frente a 2023-24</th></tr></thead><tbody><tr><td>Global</td><td class=r>186/389 (47,8 %)</td><td class=r>106/200 (53,0 %)</td><td class=r>89/133 (66,9 %)</td><td class=r>+5,2 pp [−3,3; +13,6] · p = 0,258</td><td class=r>+19,1 pp [+9,4; +28,0] · p &lt; 0,001</td></tr><tr><td>Artículos</td><td class=r>58/168 (34,5 %)</td><td class=r>50/103 (48,5 %)</td><td class=r>39/65 (60,0 %)</td><td class=r>+14,0 pp [+2,0; +25,7] · p = 0,030</td><td class=r>+25,5 pp [+11,2; +38,4] · p &lt; 0,001</td></tr><tr><td>Capítulos</td><td class=r>98/140 (70,0 %)</td><td class=r>28/55 (50,9 %)</td><td class=r>31/45 (68,9 %)</td><td class=r>−19,1 pp [−33,7; −4,0] · p = 0,019</td><td class=r>−1,1 pp [−17,2; +13,0] · p = 1,000</td></tr></tbody></table></div></div></section>
-<h2 class="sec">Resultados por tipo de aportación</h2>
-<section class="grid2"><div class='card'><h3>Artículos</h3><p class='txt'>Los artículos muestran la mejora más sólida y continua: la filiación correcta pasa del 34,5 % en 2023-24 al 48,5 % en 2025 (+14,0 puntos; p = 0,030) y al 60,0 % en 2026 (+25,5 puntos; p &lt; 0,001), entre registros con filiación conocida. Sobre el total, del 26,6 % al 41,7 % y al 52,7 %. Los artículos sin filiación registrada bajan del 22,9 % al 14,2 % y al 12,2 %.</p><p class='note' style='margin-top:1rem'>Filiación correcta por año, sobre registros con filiación conocida.</p><div class='bars'><div class='bar'><span>2023</span><span class='trk'><span class='fill' style='width:36.666666666666664%'></span></span><span class='val'>22 %</span></div><div class='bar'><span>2024</span><span class='trk'><span class='fill' style='width:73.33333333333333%'></span></span><span class='val'>44 %</span></div><div class='bar'><span>2025</span><span class='trk'><span class='fill' style='width:81.66666666666667%'></span></span><span class='val'>49 %</span></div><div class='bar top'><span>2026</span><span class='trk'><span class='fill' style='width:100.0%'></span></span><span class='val'>60 %</span></div></div><p class='txt'>El grueso de la mejora llega ya en 2024 (44,2 %), antes de la entrada en vigor, lo que sugiere que las acciones de comunicación previas surtieron efecto o que parte de las publicaciones de 2024 se firmó con la nueva denominación.</p></div>
-<div style="display:flex;flex-direction:column;gap:1rem"><div class='card'><h3>Capítulos de libro</h3><p class='txt'>Caída en 2025 y recuperación en 2026. Entre los registros con filiación conocida, la correcta pasa del 70,0 % en 2023-24 al 50,9 % en 2025 (−19,1 puntos; p = 0,019) y vuelve al 68,9 % en 2026 (−1,1 puntos; no significativo, con 45 registros evaluables). El descenso de 2025 coincide con más capítulos sin filiación registrada (37,5 % en 2023-24, 52,6 % en 2025 y 42,3 % en 2026).</p><p class='note' style='margin-top:1rem'>Filiación correcta por año, sobre registros con filiación conocida.</p><div class='bars'><div class='bar'><span>2023</span><span class='trk'><span class='fill' style='width:97.1830985915493%'></span></span><span class='val'>69 %</span></div><div class='bar top'><span>2024</span><span class='trk'><span class='fill' style='width:100.0%'></span></span><span class='val'>71 %</span></div><div class='bar'><span>2025</span><span class='trk'><span class='fill' style='width:71.83098591549296%'></span></span><span class='val'>51 %</span></div><div class='bar'><span>2026</span><span class='trk'><span class='fill' style='width:97.1830985915493%'></span></span><span class='val'>69 %</span></div></div></div><div class='card'><h3>Libros</h3><p class='txt'>No pueden evaluarse: el 92 % de los 85 registros carece de datos de filiación.</p></div></div></section>
-<section class="card"><h2>Dónde está la mejora</h2><p class="txt">La mejora global se explica sobre todo por una mayor presencia de la UEM en la firma: los registros con filiación conocida que no la mencionan bajan del 44,2 % (2023-24) al 36,0 % (2025) y al 25,6 % (2026). La corrección de la forma entre quienes sí la incluyen no mejora de forma sostenida: 85,7 %, 82,8 % y 89,9 %.</p><div class="grid2" style="margin-top:1rem"><div><p class="note">Porcentaje de registros con filiación conocida: 2023-24, 2025 y 2026.</p><div class='ba'><div><div class='ba-l'>Registros con filiación que no mencionan la UEM</div><div class='ba-line'><span class='ba-k'>2023-24</span><span class='trk'><span class='fill' style='width:44.2%;background:#b8b2b0'></span></span><span class='val'>44,2 %</span></div><div class='ba-line'><span class='ba-k'>2025</span><span class='trk'><span class='fill' style='width:36.0%;background:#d98a92'></span></span><span class='val'>36,0 %</span></div><div class='ba-line'><span class='ba-k'>2026</span><span class='trk'><span class='fill' style='width:25.6%;background:#9e1b2c'></span></span><span class='val'>25,6 %</span></div></div><div><div class='ba-l'>Forma correcta entre quienes incluyen la UEM</div><div class='ba-line'><span class='ba-k'>2023-24</span><span class='trk'><span class='fill' style='width:85.7%;background:#b8b2b0'></span></span><span class='val'>85,7 %</span></div><div class='ba-line'><span class='ba-k'>2025</span><span class='trk'><span class='fill' style='width:82.8%;background:#d98a92'></span></span><span class='val'>82,8 %</span></div><div class='ba-line'><span class='ba-k'>2026</span><span class='trk'><span class='fill' style='width:89.9%;background:#9e1b2c'></span></span><span class='val'>89,9 %</span></div></div></div></div><div><p class="note">Errores de forma más frecuentes (registros, 2023-2026).</p><div class='bars'><div class='bar top'><span>Escribirla en inglés</span><span class='trk'><span class='fill' style='width:100.0%'></span></span><span class='val'>28</span></div><div class='bar'><span>Omitir «de Madrid»</span><span class='trk'><span class='fill' style='width:96.42857142857143%'></span></span><span class='val'>27</span></div></div></div></div></section>
-<section class="card"><h2>Cómo se clasifica cada registro</h2><p class="note">Cuatro categorías que no se solapan. Un registro con varias filiaciones UEM solo es correcto si todas siguen la forma oficial.</p><div class="defs"><div><i class='sw' style='background:#9e1b2c'></i><div><b>Filiación correcta</b>Aparece «Universidad Europea de Madrid», en español y completa.</div></div><div><i class='sw' style='background:#d98a92'></i><div><b>UEM con forma incorrecta</b>Aparece la UEM, pero en inglés (European University of Madrid), sin «de Madrid», con errata, solo con siglas o con formas mezcladas.</div></div><div><i class='sw' style='background:#7a7573'></i><div><b>Otra institución</b>Hay filiaciones, pero ninguna es la UEM.</div></div><div><i class='sw' style='background:#b8b2b0'></i><div><b>Sin filiación registrada</b>El registro no incluye datos de filiación.</div></div></div></section>
-<section class="grid2"><div class="card"><h2>Conclusiones</h2><ul class="pts"><li>Efecto global: la filiación correcta aumenta 10,7 puntos (del 47,8 % al 58,6 %) entre los registros con filiación conocida al comparar 2023-24 con 2025-26. Por años: 53,0 % en 2025 (+5,2 puntos, no significativo) y 66,9 % en 2026 (+19,1 puntos, año parcial).</li><li>Artículos: es donde más mejora la filiación, y la mejora se mantiene en cada año por separado (34,5 % en 2023-24, 48,5 % en 2025 y 60,0 % en 2026).</li><li>Capítulos de libro: caen en 2025 (50,9 %) y vuelven en 2026 a un nivel similar al previo (68,9 %), con solo 45 registros evaluables. Requieren seguimiento específico.</li><li>Libros: no pueden evaluarse porque el 92 % de los registros no tiene datos de filiación.</li><li>Margen de mejora: en 2026, el 33 % de los registros con filiación conocida sigue sin filiación correcta (47 % en 2025). La causa principal es que la UEM no figura en la firma (26 % de los registros en 2026), más que una forma incorrecta (en torno al 10 % de quienes la incluyen).</li></ul></div><div class="card"><h2>Recomendaciones</h2><ul class="pts"><li>Reforzar la comunicación sobre la obligación de incluir la UEM en todas las firmas, además de la forma correcta, con especial atención a los capítulos de libro.</li><li>Insistir en la forma oficial en español y en la no utilización de la denominación en inglés ni de siglas aisladas.</li></ul></div></section>
-<details class="foot" open><summary>Fuente y método</summary><ul><li>Fuente: Portal Científico de la Universidad Europea de Madrid. Se analizan 1.091 registros de producción científica de la Facultad publicados entre 2023 y 2026: 412 artículos, 418 capítulos de libro, 130 contribuciones a congresos, 85 libros y 46 otras aportaciones. El año 2026 está en curso y su cifra es parcial.</li><li>Criterio: según la normativa de filiación institucional, la filiación correcta es «Universidad Europea de Madrid», sin traducir, abreviar ni usar siglas, y en primer lugar. Un registro con varias filiaciones UEM solo se considera correcto si todas siguen la forma oficial.</li><li>Periodo: la normativa se implantó en el curso 2024-2025. Como entre la firma y la publicación pasan meses, la comparación principal es 2023-24 frente a 2025-26; se detalla además 2025 y 2026 por separado. 2026 está en curso, por lo que sus cifras son parciales y con intervalos amplios.</li><li>Indicador principal: porcentaje de registros con filiación correcta sobre los que tienen filiación conocida. Contraste: prueba exacta de Fisher y diferencia de proporciones con intervalo de confianza del 95 % (método híbrido de Newcombe).</li></ul></details></div></body></html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Informe de Filiación Institucional · Universidad Europea de Madrid</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* ==========================================================================
+   ESTILO VISUAL OFICIAL UNIVERSIDAD EUROPEA (UEM)
+   - Colores:
+       * Rojo UEM: #FF3228 (Acento <= 10%: cifras clave, badges, botones)
+       * Antracita: #1E1E1E (Portadas, cierres y texto)
+       * Blanco: #FFFFFF (Fondo de contenido)
+       * Azul real: #2D41B4 (Rigor, alianzas y convenios)
+       * Gris de tarjetas: #F5F5F5 con bordes #EAEAEA
+   - Tipografía: Poppins, Segoe UI, Arial, sans-serif
+   - Composición: Retícula modular inspirada en el cuadrado del logo
+   - Prohibido: Degradados, iconos infantiles y líneas bajo los títulos
+   ========================================================================== */
+
+:root {
+  --color-red: #FF3228;
+  --color-anthracite: #1E1E1E;
+  --color-white: #FFFFFF;
+  --color-blue: #2D41B4;
+  --color-card-bg: #F5F5F5;
+  --color-card-border: #EAEAEA;
+  --color-border-dark: #333333;
+  --color-text-body: #1E1E1E;
+  --color-text-muted: #555555;
+  --color-text-light: #777777;
+  --font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+  --radius-square: 4px;
+  --radius-card: 6px;
+  --spacing-container: 1140px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  background-color: var(--color-white);
+  color: var(--color-text-body);
+  font-family: var(--font-family);
+  font-size: 15px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Envoltura principal */
+.page-wrap {
+  width: 100%;
+  max-width: var(--spacing-container);
+  margin: 0 auto;
+  padding: 24px 20px 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+/* Navegación superior entre versiones */
+.nav-version-bar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+}
+.nav-version-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-card-border);
+  color: var(--color-anthracite);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12.5px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+.nav-version-link:hover {
+  background: #EAEAEA;
+  border-color: #D5D5D5;
+}
+
+/* CABECERA / PORTADA INSTITUCIONAL (Antracita #1E1E1E) */
+.header-hero {
+  background-color: var(--color-anthracite);
+  color: var(--color-white);
+  border-radius: var(--radius-card);
+  padding: clamp(28px, 4vw, 44px);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--color-border-dark);
+}
+
+.logo-svg {
+  height: 40px;
+  width: auto;
+  display: block;
+}
+
+.header-meta {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #AAAAAA;
+  font-weight: 500;
+}
+
+.hero-body h1 {
+  font-size: clamp(28px, 4.5vw, 44px);
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--color-white);
+  margin-bottom: 8px;
+  letter-spacing: -0.02em;
+}
+
+.hero-faculty {
+  font-size: 17px;
+  font-weight: 500;
+  color: #CCCCCC;
+  margin-bottom: 16px;
+}
+
+.hero-lead {
+  font-size: 15px;
+  line-height: 1.6;
+  max-width: 820px;
+  color: #E0E0E0;
+  font-weight: 300;
+}
+.hero-lead b {
+  color: var(--color-white);
+  font-weight: 600;
+}
+
+/* Fila de metadatos de la cabecera */
+.hero-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 6px;
+}
+.hero-tag {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  color: #FFFFFF;
+  padding: 5px 12px;
+  border-radius: var(--radius-square);
+  font-size: 12px;
+  font-weight: 500;
+}
+.hero-tag.accent {
+  background: var(--color-red);
+  border-color: var(--color-red);
+  color: var(--color-white);
+  font-weight: 600;
+}
+
+/* CONCLUSIÓN PRINCIPAL / CALLOUT */
+.callout-box {
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-card-border);
+  border-left: 6px solid var(--color-red);
+  border-radius: var(--radius-card);
+  padding: 24px 28px;
+}
+.callout-tag {
+  display: inline-block;
+  background: var(--color-red);
+  color: var(--color-white);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 2px;
+  margin-bottom: 12px;
+}
+.callout-box h2 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-anthracite);
+  margin-bottom: 10px;
+}
+.callout-box p {
+  font-size: 14.5px;
+  line-height: 1.65;
+  color: var(--color-text-body);
+  margin-bottom: 10px;
+}
+.callout-box p:last-child {
+  margin-bottom: 0;
+}
+.callout-box b {
+  color: var(--color-anthracite);
+  font-weight: 600;
+}
+
+/* RETÍCULA MODULAR DE CIFRAS CLAVE (48-60 pt) */
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+@media (max-width: 900px) {
+  .kpi-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 500px) {
+  .kpi-grid { grid-template-columns: 1fr; }
+}
+
+.kpi-card {
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-card-border);
+  border-radius: var(--radius-card);
+  padding: 22px 20px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.kpi-card.highlight {
+  background: var(--color-white);
+  border: 2px solid var(--color-red);
+}
+.kpi-square {
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+  margin-bottom: 14px;
+}
+.kpi-card .number {
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  margin-bottom: 8px;
+}
+.kpi-card .number .unit {
+  font-size: 26px;
+  font-weight: 600;
+  margin-left: 2px;
+}
+.kpi-card .label {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--color-anthracite);
+  margin-bottom: 4px;
+}
+.kpi-card .sub {
+  font-size: 12px;
+  color: var(--color-text-muted);
+}
+
+/* SECCIONES MODULARES Y TARJETAS GENERALES */
+.card-section {
+  background: var(--color-white);
+  border: 1px solid var(--color-card-border);
+  border-radius: var(--radius-card);
+  padding: 28px 30px;
+}
+.card-section.bg-gray {
+  background: var(--color-card-bg);
+}
+
+.section-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--color-anthracite);
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.section-title .square-mark {
+  width: 10px;
+  height: 10px;
+  background: var(--color-red);
+  display: inline-block;
+  border-radius: 1px;
+}
+.section-subtitle {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  margin-bottom: 22px;
+  line-height: 1.5;
+}
+
+/* GRID 2 COLUMNAS */
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+@media (max-width: 820px) {
+  .grid-2 { grid-template-columns: 1fr; }
+}
+
+/* BARRAS APILADAS ANUALES (Retícula sobria) */
+.year-stack-row {
+  display: grid;
+  grid-template-columns: 50px 1fr 110px;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+.year-label {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-anthracite);
+}
+.year-bar-track {
+  display: flex;
+  height: 32px;
+  border-radius: var(--radius-square);
+  overflow: hidden;
+  background: #E5E5E5;
+}
+.year-bar-track span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-white);
+  font-size: 11px;
+  font-weight: 600;
+  min-width: 6px;
+}
+.year-total {
+  font-size: 12px;
+  color: var(--color-text-muted);
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  font-weight: 500;
+}
+
+/* LEYENDA MODULAR */
+.legend-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px 22px;
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid var(--color-card-border);
+}
+.legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12.5px;
+  color: var(--color-text-body);
+  font-weight: 500;
+}
+.legend-box {
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+/* BARRAS DE COMPARATIVA HORIZONTAL */
+.comp-group {
+  margin-bottom: 18px;
+}
+.comp-group:last-child {
+  margin-bottom: 0;
+}
+.comp-group-label {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--color-anthracite);
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.comp-row {
+  display: grid;
+  grid-template-columns: 70px 1fr 50px;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 6px;
+  font-size: 12.5px;
+}
+.comp-year {
+  color: var(--color-text-muted);
+  font-weight: 500;
+}
+.comp-track {
+  height: 18px;
+  background: #E8E8E8;
+  border-radius: var(--radius-square);
+  overflow: hidden;
+}
+.comp-fill {
+  height: 100%;
+  border-radius: var(--radius-square);
+}
+.comp-val {
+  font-weight: 700;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  color: var(--color-anthracite);
+}
+
+/* TABLA OFICIAL UEM (Rigor y sobriedad) */
+.table-container {
+  overflow-x: auto;
+  border: 1px solid var(--color-card-border);
+  border-radius: var(--radius-square);
+}
+.uem-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12.5px;
+  text-align: left;
+}
+.uem-table th {
+  background-color: var(--color-anthracite);
+  color: var(--color-white);
+  padding: 10px 14px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-align: right;
+}
+.uem-table th:first-child {
+  text-align: left;
+}
+.uem-table td {
+  padding: 11px 14px;
+  border-bottom: 1px solid var(--color-card-border);
+  color: var(--color-text-body);
+  text-align: right;
+  white-space: nowrap;
+}
+.uem-table td:first-child {
+  text-align: left;
+  font-weight: 600;
+  color: var(--color-anthracite);
+}
+.uem-table tr:last-child td {
+  border-bottom: none;
+}
+.uem-table tr:nth-child(even) td {
+  background-color: #FAFAFA;
+}
+.table-badge {
+  display: inline-block;
+  padding: 2px 6px;
+  border-radius: 2px;
+  font-size: 11px;
+  font-weight: 600;
+}
+.table-badge.blue {
+  background: rgba(45, 65, 180, 0.12);
+  color: var(--color-blue);
+}
+.table-badge.red {
+  background: rgba(255, 50, 40, 0.12);
+  color: var(--color-red);
+}
+
+/* LISTAS DE CONCLUSIONES Y RECOMENDACIONES */
+.points-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 10px;
+}
+.points-list li {
+  position: relative;
+  padding-left: 20px;
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--color-text-body);
+}
+.points-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 7px;
+  width: 7px;
+  height: 7px;
+  background: var(--color-red);
+  border-radius: 1px;
+}
+.points-list.blue li::before {
+  background: var(--color-blue);
+}
+.points-list strong {
+  color: var(--color-anthracite);
+  font-weight: 600;
+}
+
+/* CUADROS DE CLASIFICACIÓN DE REGISTROS */
+.defs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  margin-top: 12px;
+}
+@media (max-width: 650px) {
+  .defs-grid { grid-template-columns: 1fr; }
+}
+.def-item {
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-card-border);
+  border-radius: var(--radius-square);
+  padding: 14px 16px;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+.def-color-box {
+  width: 14px;
+  height: 14px;
+  border-radius: 2px;
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+.def-content h4 {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--color-anthracite);
+  margin-bottom: 3px;
+}
+.def-content p {
+  font-size: 12.5px;
+  color: var(--color-text-muted);
+  line-height: 1.45;
+}
+
+/* PIE / CIERRE METODOLÓGICO (Antracita #1E1E1E) */
+.footer-closure {
+  background: var(--color-anthracite);
+  color: #CCCCCC;
+  border-radius: var(--radius-card);
+  padding: 28px 32px;
+  font-size: 12.5px;
+  line-height: 1.6;
+}
+.footer-closure h3 {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-white);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 12px;
+}
+.footer-closure ul {
+  padding-left: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.footer-closure strong {
+  color: var(--color-white);
+}
+.footer-bottom-bar {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid var(--color-border-dark);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11.5px;
+  color: #888888;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+</style>
+</head>
+<body>
+
+<div class="page-wrap">
+
+  <!-- BARRA DE NAVEGACIÓN ENTRE VERSIONES -->
+  <nav class="nav-version-bar">
+    <a href="version-anterior.html" class="nav-version-link">
+      <span>Ver versión anterior →</span>
+    </a>
+  </nav>
+
+  <!-- CABECERA INSTITUCIONAL (ANTRACITA #1E1E1E) -->
+  <header class="header-hero">
+    <div class="header-top">
+      <!-- LOGO OFICIAL VECTORIAL UEM (Extraído en línea con cuadrado #FF3228) -->
+      <svg class="logo-svg" viewBox="0 0 378.14 103.96" role="img" aria-label="Universidad Europea">
+        <rect width="103.76" height="103.76" rx="4" fill="#FF3228"/>
+        <path fill="#FFFFFF" d="M82.51,55.35c-1.48,6.81-6.86,8.73-9.14,9.25c-0.96,0.22-1.93,0.33-2.9,0.33c-3.13,0-6.09-1.18-8.16-3.23l25.82-14.92c-1.21-3.1-2.83-6.1-5.36-8.45c-4.49-4.16-11.02-6.06-17.03-4.64c-3.13,0.74-6.08,2.34-8.49,4.46c-2.07,1.82-3.78,4.06-4.93,6.57c-0.21,0.46-0.41,0.94-0.58,1.42c-0.26,0.72-0.47,1.46-0.63,2.22V34.79h-8.06v19.95c0,5.88-4.23,10.32-9.84,10.32c-5.65,0-9.91-4.44-9.91-10.32V34.79h-8.06v19.95c0,10.49,7.56,18.11,17.97,18.11c9.88,0,17.16-6.91,17.83-16.63c0.59,3.19,1.89,6.32,3.87,9c3.52,4.78,9.34,7.63,15.57,7.630c1.55,0,3.12-0.18,4.65-0.52c7.75-1.75,13.53-7.67,15.16-15.48L82.51,55.35z M58.86,55.02c-0.45-2.22-0.34-4.35,0.32-6.18c0.98-2.69,3.05-4.93,5.54-6.31c4.25-2.36,9.92-1.82,13.16,2.06L58.96,55.52L58.86,55.02z"/>
+        <g fill="#FFFFFF">
+          <path d="M126.95,34.58V14.15H134v20.43c0,3.71,2.67,6.48,6.19,6.48c3.52,0,6.14-2.76,6.14-6.48V14.15h7.05v20.43c0,7.67-5.62,13.33-13.19,13.33C132.57,47.91,126.95,42.25,126.95,34.58" />
+          <path d="M180.9,34.25v13.24h-6.71v-12.1c0-3.24-1.76-5.1-4.52-5.1c-1.86,0-3.71,1.05-4.67,2.67v14.52h-6.71V24.1H165v2.76c1.29-2,3.76-3.24,6.38-3.24C177.29,23.63,180.9,27.68,180.9,34.25" />
+          <path d="M192.33,47.49h-6.71V24.1h6.71V47.49z M193.05,16.82c0,2.24-1.86,4.09-4.090,4.09s-4.1-1.86-4.1-4.09c0-2.19,1.86-4.05,4.1-4.05S193.05,14.63,193.05,16.82" />
+          <polygon points="210.53,47.49 204.81,47.49 195.1,24.1 202.38,24.1 207.67,38.34 212.86,24.1 220.19,24.1" />
+          <path d="M237,33.1c-0.29-2.33-2.43-4.05-4.91-4.05c-2.81,0-4.67,1.52-5.29,4.05H237z M243.53,37.39h-16.81c0.62,3.19,2.81,4.86,6,4.86c2.09,0,4.29-0.95,5.1-2.38l5.24,3.19c-1.71,3.09-5.62,4.9-10.48,4.9c-6.86,0-12.29-5.33-12.29-12.29c0-6.81,5.33-12.05,12.14-12.05c6.33,0,11.29,4.9,11.29,11.14C243.72,35.58,243.67,36.48,243.53,37.39" />
+          <path d="M262.67,24.06l-0.38,6.29c-0.9-0.33-2.05-0.52-3-0.52c-1.52,0-3.95,1.24-5.1,3.52v14.14h-6.71V24.1h6.71v2.76c1.14-2,3.67-3.24,5.62-3.24C261,23.63,261.96,23.77,262.67,24.06" />
+          <path d="M263.34,45.01l2-4.67c2.19,1.62,5.05,2.48,7.9,2.48c2.1,0,3.43-0.81,3.43-1.9c-0.05-3.57-12.62-0.9-12.71-9.52c-0.05-4.38,3.86-7.76,9.38-7.76c3.29,0,6.57,0.81,8.91,2.67l-1.91,4.86c-1.81-1.38-4.76-2.43-7.29-2.43c-1.71,0-2.86,0.81-2.86,1.86c0.05,3.38,12.71,1.52,12.86,9.91c0,4.33-3.81,7.48-9.24,7.48C269.82,47.96,266.15,47.01,263.34,45.01" />
+          <path d="M293.39,47.49h-6.71V24.1h6.71V47.49z M294.1,16.82c0,2.24-1.86,4.09-4.09,4.09c-2.24,0-4.1-1.86-4.1-4.09c0-2.19,1.86-4.05,4.1-4.05C292.25,12.77,294.1,14.63,294.1,16.82" />
+          <polygon points="147.48,55.98 147.48,62.74 134.1,62.74 134.1,68.74 146.01,68.74 146.01,75.5 134.1,75.5 134.1,82.55 147.48,82.55 147.48,89.31 127.06,89.31 127.06,55.98" />
+          <path d="M173.77,65.93v23.38h-6.71v-2.76c-1.33,2-3.81,3.24-6.38,3.24c-5.91,0-9.52-4.05-9.52-10.67V65.93h6.71v12.1c0,3.24,1.76,5.05,4.52,5.05c1.81,0,3.67-1,4.67-2.62V65.93H173.77z" />
+          <path d="M193.68,65.88l-0.38,6.29c-0.9-0.33-2.05-0.52-3-0.52c-1.52,0-3.95,1.24-5.1,3.52v14.14h-6.71V65.93h6.71v2.76c1.14-2,3.67-3.24,5.62-3.24C192.01,65.45,192.96,65.59,193.68,65.88" />
+          <path d="M200.78,77.64c0,3.24,2.38,5.71,5.57,5.71c3.14,0,5.57-2.48,5.57-5.71c0-3.33-2.43-5.76-5.57-5.76C203.16,71.88,200.78,74.31,200.78,77.64 M218.49,77.64c0,6.95-5.29,12.14-12.14,12.14c-6.9,0-12.14-5.19-12.14-12.14c0-6.95,5.24-12.19,12.14-12.19C213.2,65.45,218.49,70.69,218.49,77.64" />
+          <path d="M235.87,65.45c-2.95,0-5.76,1.33-6.91,3.24v-2.76h-6.71v31.1h6.71V86.55c1.14,1.9,3.95,3.24,6.91,3.24c6.1,0,10.86-5.43,10.86-12.19C246.73,70.83,241.97,65.45,235.87,65.45z M234.35,83.36c-3.19,0-5.57-2.48-5.57-5.71c0-3.33,2.38-5.76,5.57-5.76c3.14,0,5.57,2.43,5.57,5.76C239.92,80.88,237.49,83.36,234.35,83.36z" />
+          <path d="M314.96,14.15v12.71c-1.14-1.9-4-3.24-6.9-3.24c-6.1,0-10.91,5.38-10.91,12.14c0,6.76,4.81,12.19,10.91,12.19c2.95,0,5.76-1.33,6.9-3.24v2.76h6.71V14.15H314.96z M309.53,41.53c-3.19,0-5.57-2.48-5.57-5.71c0-3.33,2.38-5.76,5.57-5.76c3.14,0,5.57,2.43,5.57,5.76C315.1,39.06,312.67,41.53,309.53,41.53z" />
+          <path d="M342.96,24.1v2.76c-1.14-1.9-4-3.24-6.9-3.24c-6.1,0-10.91,5.38-10.91,12.14c0,6.76,4.81,12.19,10.91,12.19c2.95,0,5.76-1.33,6.9-3.24v2.76h6.71V24.1H342.96z M337.54,41.53c-3.19,0-5.57-2.48-5.57-5.71c0-3.33,2.38-5.76,5.57-5.76c3.14,0,5.57,2.43,5.57,5.76C343.11,39.06,340.68,41.53,337.54,41.53z" />
+          <path d="M371.2,14.15v12.71c-1.14-1.9-4-3.24-6.9-3.24c-6.1,0-10.91,5.38-10.91,12.14c0,6.76,4.81,12.19,10.91,12.19c2.95,0,5.76-1.33,6.9-3.24v2.76h6.71V14.15H371.2z M365.77,41.51c-3.19,0-5.57-2.48-5.57-5.71c0-3.33,2.38-5.76,5.57-5.76c3.14,0,5.57,2.43,5.57,5.76C371.35,39.03,368.92,41.51,365.77,41.51z" />
+          <path d="M293.02,65.93v2.76c-1.14-1.9-4-3.24-6.9-3.24c-6.1,0-10.91,5.38-10.91,12.14c0,6.76,4.81,12.19,10.91,12.19c2.95,0,5.76-1.33,6.9-3.24v2.76h6.71V65.93H293.02z M287.59,83.36c-3.19,0-5.57-2.48-5.57-5.71c0-3.33,2.38-5.76,5.57-5.76c3.14,0,5.57,2.43,5.57,5.76C293.16,80.88,290.73,83.36,287.59,83.36z" />
+          <path d="M267.67,79.42c-0.7,2.88-3.38,4.86-6.39,4.86c-1.75,0-3.29-0.67-4.41-1.79l10.65-6.15c0,0,0,0,0,0.01l5.02-2.91c-1.61-4.78-5.96-8.03-11.26-8.03c-6.79,0-11.94,5.25-11.94,12.23s5.15,12.18,11.94,12.18c5.76,0,10.64-3.75,11.87-9.21L267.67,79.42z M254.94,77.63c0-3.87,2.71-6.7,6.35-6.7c1.51,0,2.88,0.51,3.95,1.38l-10.29,5.65C254.95,77.86,254.94,77.75,254.94,77.63z" />
+        </g>
+      </svg>
+      <div class="header-meta">Portal Científico · Noviembre de 2026</div>
+    </div>
+
+    <div class="hero-body">
+      <h1>Filiación institucional</h1>
+      <div class="hero-faculty">Facultad de Ciencias Jurídicas, Educación y Humanidades</div>
+      <p class="hero-lead">
+        Este informe evalúa si la normativa de filiación institucional de la Universidad Europea, implantada en el curso 2024-2025, ha conseguido que el personal investigador de la Facultad firme sus publicaciones con la denominación oficial: <b>Universidad Europea de Madrid</b>.
+      </p>
+      <div class="hero-tags">
+        <span class="hero-tag accent">Normativa 2024-2025</span>
+        <span class="hero-tag">1.091 Registros de producción</span>
+        <span class="hero-tag">Periodo 2023–2026</span>
+        <span class="hero-tag">Portal Científico UEM</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- CONCLUSIÓN PRINCIPAL (Callout con acento Rojo UEM) -->
+  <section class="callout-box">
+    <span class="callout-tag">Conclusión principal</span>
+    <h2>Efecto parcial y estadísticamente significativo</h2>
+    <p>
+      La normativa ha funcionado de forma parcial. Entre los registros con filiación conocida, la filiación correcta pasa del <b>47,8 % (2023-24) al 58,6 % (2025-26)</b>: <b>+10,7 puntos porcentuales</b>, una diferencia estadísticamente significativa (<b>p = 0,004</b>).
+    </p>
+    <p>
+      Desglosado por año, la filiación correcta pasa del <b>47,8 % en 2023-24</b> al <b>53,0 % en 2025</b> y al <b>66,9 % en 2026</b>. La mejora de 2025 aún no es estadísticamente significativa; la de 2026 sí (<b>+19,1 puntos; p &lt; 0,001</b>), aunque 2026 es un año parcial con 133 registros evaluables. Mejoran sustancialmente los artículos; los capítulos caen en 2025 y se recuperan en 2026; los libros no pueden evaluarse por falta de registro de filiación.
+    </p>
+  </section>
+
+  <!-- RETÍCULA MODULAR DE CIFRAS CLAVE (48-60 pt) -->
+  <section>
+    <div class="kpi-grid">
+      <!-- KPI 1: FILIACIÓN CORRECTA (Acento Rojo UEM #FF3228) -->
+      <div class="kpi-card highlight">
+        <div class="kpi-square" style="background: var(--color-red);"></div>
+        <div class="number" style="color: var(--color-red);">34.9<span class="unit">%</span></div>
+        <div class="label">Filiación correcta</div>
+        <div class="sub">381 de 1.091 registros totales</div>
+      </div>
+
+      <!-- KPI 2: UEM FORMA INCORRECTA -->
+      <div class="kpi-card">
+        <div class="kpi-square" style="background: #E08A93;"></div>
+        <div class="number" style="color: var(--color-anthracite);">5.8<span class="unit">%</span></div>
+        <div class="label">UEM forma incorrecta</div>
+        <div class="sub">63 de 1.091 registros totales</div>
+      </div>
+
+      <!-- KPI 3: OTRA INSTITUCIÓN (Azul Real UEM #2D41B4) -->
+      <div class="kpi-card">
+        <div class="kpi-square" style="background: var(--color-blue);"></div>
+        <div class="number" style="color: var(--color-blue);">25.5<span class="unit">%</span></div>
+        <div class="label">Otra institución</div>
+        <div class="sub">278 de 1.091 registros totales</div>
+      </div>
+
+      <!-- KPI 4: SIN FILIACIÓN REGISTRADA -->
+      <div class="kpi-card">
+        <div class="kpi-square" style="background: #999999;"></div>
+        <div class="number" style="color: var(--color-text-muted);">33.8<span class="unit">%</span></div>
+        <div class="label">Sin filiación registrada</div>
+        <div class="sub">369 de 1.091 registros totales</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DISTRIBUCIÓN ANUAL DE LOS REGISTROS (Barras apiladas modulares) -->
+  <section class="card-section bg-gray">
+    <h2 class="section-title"><span class="square-mark"></span> Distribución anual de los registros según la filiación</h2>
+    <p class="section-subtitle">Porcentaje sobre el total de cada año. La normativa entró en vigor en septiembre de 2024 y el año 2026 es parcial.</p>
+
+    <!-- 2023 -->
+    <div class="year-stack-row">
+      <span class="year-label">2023</span>
+      <div class="year-bar-track">
+        <span style="flex:69; background: var(--color-red);" title="Filiación correcta: 69 (25,6%)">25,6%</span>
+        <span style="flex:17; background: #E08A93;" title="UEM forma incorrecta: 17 (6,3%)"></span>
+        <span style="flex:84; background: var(--color-blue);" title="Otra institución: 84 (31,1%)">31,1%</span>
+        <span style="flex:100; background: #C8C8C8; color: #444;" title="Sin filiación: 100 (37,0%)">37,0%</span>
+      </div>
+      <span class="year-total">270 registros</span>
+    </div>
+
+    <!-- 2024 -->
+    <div class="year-stack-row">
+      <span class="year-label">2024</span>
+      <div class="year-bar-track">
+        <span style="flex:117; background: var(--color-red);" title="Filiación correcta: 117 (35,2%)">35,2%</span>
+        <span style="flex:14; background: #E08A93;" title="UEM forma incorrecta: 14 (4,2%)"></span>
+        <span style="flex:88; background: var(--color-blue);" title="Otra institución: 88 (26,5%)">26,5%</span>
+        <span style="flex:113; background: #C8C8C8; color: #444;" title="Sin filiación: 113 (34,0%)">34,0%</span>
+      </div>
+      <span class="year-total">332 registros</span>
+    </div>
+
+    <!-- 2025 -->
+    <div class="year-stack-row">
+      <span class="year-label">2025</span>
+      <div class="year-bar-track">
+        <span style="flex:106; background: var(--color-red);" title="Filiación correcta: 106 (35,0%)">35,0%</span>
+        <span style="flex:22; background: #E08A93;" title="UEM forma incorrecta: 22 (7,3%)"></span>
+        <span style="flex:72; background: var(--color-blue);" title="Otra institución: 72 (23,8%)">23,8%</span>
+        <span style="flex:103; background: #C8C8C8; color: #444;" title="Sin filiación: 103 (34,0%)">34,0%</span>
+      </div>
+      <span class="year-total">303 registros</span>
+    </div>
+
+    <!-- 2026 -->
+    <div class="year-stack-row">
+      <span class="year-label">2026</span>
+      <div class="year-bar-track">
+        <span style="flex:89; background: var(--color-red);" title="Filiación correcta: 89 (47,8%)">47,8%</span>
+        <span style="flex:10; background: #E08A93;" title="UEM forma incorrecta: 10 (5,4%)"></span>
+        <span style="flex:34; background: var(--color-blue);" title="Otra institución: 34 (18,3%)">18,3%</span>
+        <span style="flex:53; background: #C8C8C8; color: #444;" title="Sin filiación: 53 (28,5%)">28,5%</span>
+      </div>
+      <span class="year-total">186 registros</span>
+    </div>
+
+    <!-- Leyenda -->
+    <div class="legend-grid">
+      <div class="legend-item"><div class="legend-box" style="background: var(--color-red);"></div> Filiación correcta</div>
+      <div class="legend-item"><div class="legend-box" style="background: #E08A93;"></div> UEM con forma incorrecta</div>
+      <div class="legend-item"><div class="legend-box" style="background: var(--color-blue);"></div> Otra institución</div>
+      <div class="legend-item"><div class="legend-box" style="background: #C8C8C8;"></div> Sin filiación registrada</div>
+    </div>
+  </section>
+
+  <!-- COMPARATIVA Y TABLA ESTADÍSTICA (GRID 2 COLUMNAS) -->
+  <div class="grid-2">
+
+    <!-- Tarjeta de Evolución por periodos -->
+    <section class="card-section">
+      <h2 class="section-title"><span class="square-mark"></span> Filiación correcta por periodo</h2>
+      <p class="section-subtitle">Porcentaje sobre registros con filiación conocida (2023-24, 2025 y 2026).</p>
+
+      <!-- Global -->
+      <div class="comp-group">
+        <div class="comp-group-label">Total Global</div>
+        <div class="comp-row">
+          <span class="comp-year">2023-24</span>
+          <div class="comp-track"><div class="comp-fill" style="width: 47.8%; background: #BBBBBB;"></div></div>
+          <span class="comp-val">47,8%</span>
+        </div>
+        <div class="comp-row">
+          <span class="comp-year">2025</span>
+          <div class="comp-track"><div class="comp-fill" style="width: 53.0%; background: #E08A93;"></div></div>
+          <span class="comp-val">53,0%</span>
+        </div>
+        <div class="comp-row">
+          <span class="comp-year">2026</span>
+          <div class="comp-track"><div class="comp-fill" style="width: 66.9%; background: var(--color-red);"></div></div>
+          <span class="comp-val">66,9%</span>
+        </div>
+      </div>
+
+      <!-- Artículos -->
+      <div class="comp-group">
+        <div class="comp-group-label">Artículos científicos</div>
+        <div class="comp-row">
+          <span class="comp-year">2023-24</span>
+          <div class="comp-track"><div class="comp-fill" style="width: 34.5%; background: #BBBBBB;"></div></div>
+          <span class="comp-val">34,5%</span>
+        </div>
+        <div class="comp-row">
+          <span class="comp-year">2025</span>
+          <div class="comp-track"><div class="comp-fill" style="width: 48.5%; background: #E08A93;"></div></div>
+          <span class="comp-val">48,5%</span>
+        </div>
+        <div class="comp-row">
+          <span class="comp-year">2026</span>
+          <div class="comp-track"><div class="comp-fill" style="width: 60.0%; background: var(--color-red);"></div></div>
+          <span class="comp-val">60,0%</span>
+        </div>
+      </div>
+
+      <!-- Capítulos -->
+      <div class="comp-group">
+        <div class="comp-group-label">Capítulos de libro</div>
+        <div class="comp-row">
+          <span class="comp-year">2023-24</span>
+          <div class="comp-track"><div class="comp-fill" style="width: 70.0%; background: #BBBBBB;"></div></div>
+          <span class="comp-val">70,0%</span>
+        </div>
+        <div class="comp-row">
+          <span class="comp-year">2025</span>
+          <div class="comp-track"><div class="comp-fill" style="width: 50.9%; background: #E08A93;"></div></div>
+          <span class="comp-val">50,9%</span>
+        </div>
+        <div class="comp-row">
+          <span class="comp-year">2026</span>
+          <div class="comp-track"><div class="comp-fill" style="width: 68.9%; background: var(--color-red);"></div></div>
+          <span class="comp-val">68,9%</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tabla Estadística de Rigor (Azul Real #2D41B4) -->
+    <section class="card-section">
+      <h2 class="section-title"><span class="square-mark" style="background: var(--color-blue);"></span> Detalle de la comparación estadística</h2>
+      <p class="section-subtitle">Registros correctos sobre conocidos. Intervalo de confianza al 95% y significación p.</p>
+
+      <div class="table-container">
+        <table class="uem-table">
+          <thead>
+            <tr>
+              <th>Tipo</th>
+              <th>2023-24</th>
+              <th>2025</th>
+              <th>2026</th>
+              <th>2026 vs 2023-24</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Global</td>
+              <td>186/389<br><small style="color:#777;">(47,8%)</small></td>
+              <td>106/200<br><small style="color:#777;">(53,0%)</small></td>
+              <td>89/133<br><small style="color:#777;">(66,9%)</small></td>
+              <td><span class="table-badge red">+19,1 pp</span><br><small style="color:#777;">p &lt; 0,001</small></td>
+            </tr>
+            <tr>
+              <td>Artículos</td>
+              <td>58/168<br><small style="color:#777;">(34,5%)</small></td>
+              <td>50/103<br><small style="color:#777;">(48,5%)</small></td>
+              <td>39/65<br><small style="color:#777;">(60,0%)</small></td>
+              <td><span class="table-badge red">+25,5 pp</span><br><small style="color:#777;">p &lt; 0,001</small></td>
+            </tr>
+            <tr>
+              <td>Capítulos</td>
+              <td>98/140<br><small style="color:#777;">(70,0%)</small></td>
+              <td>28/55<br><small style="color:#777;">(50,9%)</small></td>
+              <td>31/45<br><small style="color:#777;">(68,9%)</small></td>
+              <td><span class="table-badge blue">−1,1 pp</span><br><small style="color:#777;">p = 1,000</small></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div style="margin-top: 16px; font-size: 12.5px; color: var(--color-text-muted); line-height: 1.5;">
+        <strong>Interpretación:</strong> La mejora interanual en artículos es sólida y consistente (+25,5 puntos). En capítulos de libro se aprecia una oscilación sin significación respecto al periodo basal.
+      </div>
+    </section>
+
+  </div>
+
+  <!-- RESULTADOS POR TIPO DE APORTACIÓN -->
+  <section class="card-section bg-gray">
+    <h2 class="section-title"><span class="square-mark"></span> Resultados detallados por tipo de aportación</h2>
+    <p class="section-subtitle">Comportamiento diferencial entre artículos científicos, capítulos y monografías completas.</p>
+
+    <div class="grid-2">
+      <!-- Artículos -->
+      <div style="background:#FFF; padding:20px; border-radius: var(--radius-square); border: 1px solid var(--color-card-border);">
+        <h3 style="font-size:16px; font-weight:700; color:var(--color-anthracite); margin-bottom:8px;">Artículos científicos</h3>
+        <p style="font-size:13.5px; line-height:1.55; color:var(--color-text-body); margin-bottom:14px;">
+          Presentan la mejora más sólida y continua: la filiación correcta pasa del <b>34,5 % en 2023-24</b> al <b>48,5 % en 2025</b> (+14,0 puntos; p = 0,030) y alcanza el <b>60,0 % en 2026</b> (+25,5 puntos; p &lt; 0,001). Además, los artículos sin filiación bajan progresivamente del 22,9 % al 12,2 %.
+        </p>
+        <div style="display:flex; flex-direction:column; gap:6px;">
+          <div class="comp-row"><span class="comp-year">2023</span><div class="comp-track"><div class="comp-fill" style="width:22%; background:#DDD;"></div></div><span class="comp-val">22%</span></div>
+          <div class="comp-row"><span class="comp-year">2024</span><div class="comp-track"><div class="comp-fill" style="width:44%; background:#BBB;"></div></div><span class="comp-val">44%</span></div>
+          <div class="comp-row"><span class="comp-year">2025</span><div class="comp-track"><div class="comp-fill" style="width:49%; background:#E08A93;"></div></div><span class="comp-val">49%</span></div>
+          <div class="comp-row"><span class="comp-year">2026</span><div class="comp-track"><div class="comp-fill" style="width:60%; background:var(--color-red);"></div></div><span class="comp-val" style="color:var(--color-red);">60%</span></div>
+        </div>
+      </div>
+
+      <!-- Capítulos y Libros -->
+      <div style="display:flex; flex-direction:column; gap:16px;">
+        <div style="background:#FFF; padding:18px 20px; border-radius: var(--radius-square); border: 1px solid var(--color-card-border);">
+          <h3 style="font-size:15px; font-weight:700; color:var(--color-anthracite); margin-bottom:6px;">Capítulos de libro</h3>
+          <p style="font-size:13px; line-height:1.5; color:var(--color-text-body);">
+            Caída en 2025 (50,9 %) y recuperación en 2026 (68,9 %). El descenso coincide con un incremento sustancial de capítulos sin datos de filiación en la base de datos (más del 42 %).
+          </p>
+        </div>
+
+        <div style="background:#FFF; padding:18px 20px; border-radius: var(--radius-square); border: 1px solid var(--color-card-border);">
+          <h3 style="font-size:15px; font-weight:700; color:var(--color-anthracite); margin-bottom:6px;">Libros y monografías</h3>
+          <p style="font-size:13px; line-height:1.5; color:var(--color-text-body);">
+            No pueden evaluarse formalmente: el <b>92 % de los 85 registros</b> registrados carece de datos de filiación en el Portal Científico.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ANÁLISIS DE MEJORA Y ERRORES FRECUENTES -->
+  <section class="card-section">
+    <h2 class="section-title"><span class="square-mark"></span> Dónde está la mejora y principales errores de forma</h2>
+    <p class="section-subtitle">Desglose de factores determinantes y causas más comunes de incorrección.</p>
+
+    <div class="grid-2">
+      <div>
+        <p style="font-size:13.5px; line-height:1.6; color:var(--color-text-body); margin-bottom:14px;">
+          La mejora global obedece sobre todo a la <b>mayor presencia de la UEM en la firma</b>: los registros que no la mencionan caen del 44,2 % (2023-24) al 25,6 % (2026). Entre quienes sí la incluyen, la corrección de la denominación se mantiene alta y estable (86%–90%).
+        </p>
+        <div class="comp-group">
+          <div class="comp-group-label" style="font-size:11.5px;">Registros que NO mencionan la UEM</div>
+          <div class="comp-row"><span class="comp-year">2023-24</span><div class="comp-track"><div class="comp-fill" style="width:44.2%; background:#BBB;"></div></div><span class="comp-val">44,2%</span></div>
+          <div class="comp-row"><span class="comp-year">2025</span><div class="comp-track"><div class="comp-fill" style="width:36.0%; background:#E08A93;"></div></div><span class="comp-val">36,0%</span></div>
+          <div class="comp-row"><span class="comp-year">2026</span><div class="comp-track"><div class="comp-fill" style="width:25.6%; background:var(--color-red);"></div></div><span class="comp-val">25,6%</span></div>
+        </div>
+      </div>
+
+      <div style="background:var(--color-card-bg); padding:18px 20px; border-radius:var(--radius-square); border:1px solid var(--color-card-border);">
+        <h4 style="font-size:13px; font-weight:700; color:var(--color-anthracite); text-transform:uppercase; letter-spacing:0.05em; margin-bottom:12px;">
+          Errores de forma más repetidos (2023–2026)
+        </h4>
+        <div style="display:flex; flex-direction:column; gap:10px;">
+          <div class="comp-row" style="grid-template-columns: 140px 1fr 30px;">
+            <span style="font-size:12px; font-weight:500;">Escribirla en inglés</span>
+            <div class="comp-track"><div class="comp-fill" style="width:100%; background:var(--color-red);"></div></div>
+            <span class="comp-val" style="color:var(--color-red);">28</span>
+          </div>
+          <div class="comp-row" style="grid-template-columns: 140px 1fr 30px;">
+            <span style="font-size:12px; font-weight:500;">Omitir «de Madrid»</span>
+            <div class="comp-track"><div class="comp-fill" style="width:96.4%; background:#E08A93;"></div></div>
+            <span class="comp-val">27</span>
+          </div>
+        </div>
+        <div style="font-size:12px; color:var(--color-text-muted); margin-top:14px; line-height:1.45;">
+          * Las dos causas concentran el 87% de todas las incorrecciones formales detectadas.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLASIFICACIÓN MODULAR DE CRITERIOS -->
+  <section class="card-section bg-gray">
+    <h2 class="section-title"><span class="square-mark"></span> Clasificación de los registros</h2>
+    <p class="section-subtitle">Cuatro categorías mutuamente excluyentes aplicadas al análisis de filiación.</p>
+
+    <div class="defs-grid">
+      <div class="def-item">
+        <div class="def-color-box" style="background: var(--color-red);"></div>
+        <div class="def-content">
+          <h4>Filiación correcta</h4>
+          <p>Aparece con la denominación oficial completa y en español: «Universidad Europea de Madrid».</p>
+        </div>
+      </div>
+
+      <div class="def-item">
+        <div class="def-color-box" style="background: #E08A93;"></div>
+        <div class="def-content">
+          <h4>UEM con forma incorrecta</h4>
+          <p>Menciona la institución pero traducida al inglés, sin «de Madrid», solo siglas o variantes mezcladas.</p>
+        </div>
+      </div>
+
+      <div class="def-item">
+        <div class="def-color-box" style="background: var(--color-blue);"></div>
+        <div class="def-content">
+          <h4>Otra institución</h4>
+          <p>El registro contiene filiaciones institucionales, pero ninguna corresponde a la Universidad Europea.</p>
+        </div>
+      </div>
+
+      <div class="def-item">
+        <div class="def-color-box" style="background: #AAAAAA;"></div>
+        <div class="def-content">
+          <h4>Sin filiación registrada</h4>
+          <p>El registro extraído del Portal Científico no contiene ningún campo de filiación institucional cumplimentado.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONCLUSIONES Y RECOMENDACIONES (GRID MODULAR) -->
+  <div class="grid-2">
+    <!-- Conclusiones -->
+    <section class="card-section">
+      <h2 class="section-title"><span class="square-mark"></span> Conclusiones</h2>
+      <ul class="points-list">
+        <li><strong>Efecto global medible:</strong> La filiación correcta aumenta +10,7 puntos entre registros con filiación conocida (del 47,8 % al 58,6 %).</li>
+        <li><strong>Artículos como motor:</strong> Es la tipología de producción que presenta la evolución más sólida y constante (alcanzando el 60 % en 2026).</li>
+        <li><strong>Capítulos de libro:</strong> Requieren especial supervisión debido a la caída transitoria de 2025 y a la alta tasa de registros sin datos.</li>
+        <li><strong>Margen de actuación:</strong> En 2026, un 33 % de publicaciones con filiación conocida sigue sin firmar correctamente por omitir la pertenencia a la UEM.</li>
+      </ul>
+    </section>
+
+    <!-- Recomendaciones -->
+    <section class="card-section" style="border-left: 4px solid var(--color-blue);">
+      <h2 class="section-title"><span class="square-mark" style="background: var(--color-blue);"></span> Recomendaciones</h2>
+      <ul class="points-list blue">
+        <li><strong>Refuerzo en convocatorias:</strong> Comunicar de forma explícita la obligación de incluir la UEM en todas las firmas docentes e investigadoras.</li>
+        <li><strong>Forma oficial en español:</strong> Insistir en rechazar traducciones («European University of Madrid») o siglas aisladas («UEM») en envíos editoriales.</li>
+        <li><strong>Protocolo para libros y capítulos:</strong> Establecer una plantilla de firma institucional obligatoria previa a la firma de contratos editoriales.</li>
+      </ul>
+    </section>
+  </div>
+
+  <!-- CIERRE Y METODOLOGÍA (ANTRACITA #1E1E1E) -->
+  <footer class="footer-closure">
+    <h3>Fuente y metodología institucional</h3>
+    <ul>
+      <li><strong>Fuente de extracción:</strong> Portal Científico de la Universidad Europea de Madrid. Se analizan 1.091 registros de producción científica de la Facultad de Ciencias Jurídicas, Educación y Humanidades publicados entre 2023 y 2026 (412 artículos, 418 capítulos de libro, 130 congresos, 85 libros y 46 aportaciones misceláneas). El año 2026 está en curso.</li>
+      <li><strong>Criterio normativo:</strong> Según la directriz de filiación, la forma oficial exigida es «Universidad Europea de Madrid», sin traducir, abreviar ni usar siglas. En casos con múltiples firmas UEM, solo computa como correcta si todas se ajustan a la norma.</li>
+      <li><strong>Contraste estadístico:</strong> Prueba exacta de Fisher y cálculo de diferencia de proporciones con intervalo de confianza al 95 % mediante método híbrido de Newcombe.</li>
+    </ul>
+
+    <div class="footer-bottom-bar">
+      <span>Universidad Europea de Madrid · Portal Científico</span>
+      <span>Documento de evaluación interna · Noviembre 2026</span>
+    </div>
+  </footer>
+
+</div>
+
+</body>
+</html>
